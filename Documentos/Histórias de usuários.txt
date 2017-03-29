@@ -1,0 +1,69 @@
+Histórias de usuários: Sistema de administração condominial
+
+- Danilo
+
+1.Autenticação de usuário
+
+	Como usuário eu quero acessar o sistema através de um método de autenticação.
+	Para garantir a segurança das informações disponibilizadas.
+  
+4.Controle individual de taxas de condomínio
+
+	Como morador eu quero visualizar as minhas faturas das taxas condominiais.
+	Para controlar os pagamentos e confirmar as quitações já realizadas.
+  
+-----------------------------------------------------------------------------------
+
+- Vitor
+
+2.Controle de reserva do salão multiuso
+
+	Como morador eu quero fazer a reserva do salão multiuso.
+	Para garantir a disponibilidade do espaço em uma data específica.
+
+5.Cadastro de receitas e despesas
+
+	Como membro da administração eu quero cadastrar as despesas e receitas do mês.
+	Para gerenciar o controle fiscal das contas do condomínio.
+
+-----------------------------------------------------------------------------------
+
+- Vinícius
+
+6.Controle de correio
+
+	Como funcionário eu quero cadastrar as correspondências dos moradores.
+	Para controlar a distribuição dos itens recebidos.
+
+8.Notificação de correspondência
+
+	Como usuário eu quero receber uma notificação de correspondência recebida.
+	Para poder proceder no recebimento do item.
+
+-----------------------------------------------------------------------------------
+
+- Thiago
+
+9.Cadastrar usuários do sistema
+
+	Como administrador eu quero gerenciar o acesso de usuários.
+	Para definir o perfil de acesso do indivíduo.
+  
+3.Transparência das contas do condomínio
+
+	Como morador eu quero visualisar o relatório financeiro e o balanço do exercício.
+	Para exercer a fiscalização das contas do condomínio.
+
+-----------------------------------------------------------------------------------
+
+- Gabriel
+
+10.Possuir mural de avisos destinado a veiculação de informações diversas
+
+	Como usuário eu quero anunciar mensagens em um mural de avisos virtual.
+	Para que eu consiga a colaboração e/ou atenção dos demais usuários.
+  
+7.Possuir um meio de validação da prestação de contas da administração
+
+	Como membro do conselho fiscal eu quero validar as contas prestadas pela administração.
+	Para garantir a gestão efetiva dos recursos financeiros do condomínio.
