@@ -6,11 +6,19 @@ Histórias de usuários: Sistema de administração condominial
 
 	Como usuário eu quero acessar o sistema através de um método de autenticação.
 	Para garantir a segurança das informações disponibilizadas.
+	
+	Classificação cliente (valor): 2
+	Classificação desenvolvedor (valor): 3
+	Tempo estimado de desenvolvimento:
   
 4.Controle individual de taxas de condomínio
 
 	Como morador eu quero visualizar as minhas faturas das taxas condominiais.
 	Para controlar os pagamentos e confirmar as quitações já realizadas.
+	
+	Classificação cliente (valor): 1
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento:
   
 -----------------------------------------------------------------------------------
 
@@ -20,11 +28,19 @@ Histórias de usuários: Sistema de administração condominial
 
 	Como morador eu quero fazer a reserva do salão multiuso.
 	Para garantir a disponibilidade do espaço em uma data específica.
+	
+	Classificação cliente (valor): 1
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento:
 
 5.Cadastro de receitas e despesas
 
 	Como membro da administração eu quero cadastrar as despesas e receitas do mês.
 	Para gerenciar o controle fiscal das contas do condomínio.
+	
+	Classificação cliente (valor): 3
+	Classificação desenvolvedor (valor): 3
+	Tempo estimado de desenvolvimento:
 
 -----------------------------------------------------------------------------------
 
@@ -34,11 +50,19 @@ Histórias de usuários: Sistema de administração condominial
 
 	Como funcionário eu quero cadastrar as correspondências dos moradores.
 	Para controlar a distribuição dos itens recebidos.
+	
+	Classificação cliente (valor): 1
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento:
 
 8.Notificação de correspondência
 
 	Como usuário eu quero receber uma notificação de correspondência recebida.
 	Para poder proceder no recebimento do item.
+	
+	Classificação cliente (valor): 1
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento:
 
 -----------------------------------------------------------------------------------
 
@@ -48,11 +72,19 @@ Histórias de usuários: Sistema de administração condominial
 
 	Como administrador eu quero gerenciar o acesso de usuários.
 	Para definir o perfil de acesso do indivíduo.
+	
+	Classificação cliente (valor): 3
+	Classificação desenvolvedor (valor): 3
+	Tempo estimado de desenvolvimento:
   
 3.Transparência das contas do condomínio
 
 	Como morador eu quero visualisar o relatório financeiro e o balanço do exercício.
 	Para exercer a fiscalização das contas do condomínio.
+	
+	Classificação cliente (valor): 2
+	Classificação desenvolvedor (valor): 2
+	Tempo estimado de desenvolvimento:
 
 -----------------------------------------------------------------------------------
 
@@ -62,8 +94,16 @@ Histórias de usuários: Sistema de administração condominial
 
 	Como usuário eu quero anunciar mensagens em um mural de avisos virtual.
 	Para que eu consiga a colaboração e/ou atenção dos demais usuários.
+	
+	Classificação cliente (valor): 1
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento:
   
 7.Possuir um meio de validação da prestação de contas da administração
 
 	Como membro do conselho fiscal eu quero validar as contas prestadas pela administração.
 	Para garantir a gestão efetiva dos recursos financeiros do condomínio.
+	
+	Classificação cliente (valor): 2
+	Classificação desenvolvedor (valor): 2
+	Tempo estimado de desenvolvimento:
