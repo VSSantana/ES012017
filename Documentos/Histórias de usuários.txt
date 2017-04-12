@@ -57,7 +57,7 @@ Histórias de usuários: Sistema de administração condominial
 
 8.Notificação de correspondência
 
-	Como usuário eu quero receber uma notificação de correspondência recebida.
+	Como usuário eu quero receber uma notificação de correspondência aguardando retirada.
 	Para poder proceder no recebimento do item.
 	
 	Classificação cliente (valor): 1
