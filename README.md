@@ -2,7 +2,7 @@
 
 <html>
 
-<p style="text-align:justify"><strong>Projeto</strong></p>
+<p style="text-align:justify"><span style="font-size:22px"><strong>Projeto</strong></span></p>
 
 <p style="text-align:justify">&nbsp;</p>
 
@@ -10,7 +10,7 @@
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Metodologia</strong></p>
+<p style="text-align:justify"><span style="font-size:22px"><strong>Metodologia</strong></span></p>
 
 <p style="text-align:justify">&nbsp;</p>
 
@@ -28,7 +28,7 @@
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Stakeholders</strong></p>
+<p style="text-align:justify"><span style="font-size:22px"><strong>Stakeholders</strong></span></p>
 
 <p style="text-align:justify">&nbsp;</p>
 
@@ -37,7 +37,7 @@
 <p style="text-align:justify">&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify"><strong>Administra&ccedil;&atilde;o</strong></li>
+	<li style="text-align:justify"><span style="font-size:18px"><strong>Administra&ccedil;&atilde;o</strong></span></li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -47,7 +47,7 @@
 <p style="text-align:justify">&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify"><strong>Cond&ocirc;minos</strong></li>
+	<li style="text-align:justify"><span style="font-size:18px"><strong>Cond&ocirc;minos</strong></span></li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -61,7 +61,7 @@
 <p style="text-align:justify">&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify"><strong>Funcion&aacute;rios</strong></li>
+	<li style="text-align:justify"><span style="font-size:18px"><strong>Funcion&aacute;rios</strong></span></li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -70,7 +70,7 @@
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Arquitetura e justificativa</strong></p>
+<p style="text-align:justify"><span style="font-size:22px"><strong>Arquitetura e justificativa</strong></span></p>
 
 <p style="text-align:justify">&nbsp;</p>
 
@@ -80,24 +80,24 @@
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Hist&oacute;rias de usu&aacute;rio</strong></p>
+<p style="text-align:justify"><span style="font-size:22px"><strong>Hist&oacute;rias de usu&aacute;rio</strong></span></p>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <p style="text-align:justify">As seguintes hist&oacute;rias de usu&aacute;rio foram escritas em conjunto com o cliente, sendo refinadas pela equipe de desenvolvimento e revalidadas com o cliente que nesse momento designou valores de um a tr&ecirc;s, sendo um menos relevante e tr&ecirc;s mais relevante, para cada hist&oacute;ria.</p>
 
-<p style="text-align:justify">Ap&oacute;s esta fase de constru&ccedil;&atilde;o inicial, as hist&oacute;rias foram distribu&iacute;das entre os desenvolvedores, sendo cada uma delas classificada novamente pelo desenvolvedor que posteriormente definiu um tempo estimado de desenvolvimento em horas/semanas, sendo cada semana composta por vinte horas distribu&iacute;das em sete dias.</p>
+<p style="text-align:justify">Ap&oacute;s esta fase de constru&ccedil;&atilde;o inicial, as hist&oacute;rias foram distribu&iacute;das entre os desenvolvedores, sendo cada uma delas classificada novamente, agora por dificuldade de implementa&ccedil;&atilde;o,&nbsp;pelo desenvolvedor que posteriormente definiu um tempo estimado de desenvolvimento em horas/semanas, sendo cada semana composta por vinte horas distribu&iacute;das em sete dias.</p>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify"><strong>Danilo</strong></li>
+	<li style="text-align:justify"><span style="font-size:18px"><strong>Danilo</strong></span></li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol>
-	<li style="text-align:justify"><strong>Autentica&ccedil;&atilde;o de usu&aacute;rio</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Autentica&ccedil;&atilde;o de usu&aacute;rio</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -107,15 +107,15 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 2</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="4">
-	<li style="text-align:justify"><strong>Controle individual de taxas de condom&iacute;nio</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Controle individual de taxas de condom&iacute;nio</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -125,21 +125,21 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify"><strong>Vitor</strong></li>
+	<li style="text-align:justify"><span style="font-size:18px"><strong>Vitor</strong></span></li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="2">
-	<li style="text-align:justify"><strong>Controle de reserva do sal&atilde;o multiuso</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Controle de reserva do sal&atilde;o multiuso</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -149,15 +149,15 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="5">
-	<li style="text-align:justify"><strong>Cadastro de receitas e despesas</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Cadastro de receitas e despesas</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -167,19 +167,21 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 3</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Vin&iacute;cius</strong></p>
+<ul>
+	<li style="text-align: justify;"><span style="font-size:18px"><strong>Vin&iacute;cius</strong></span></li>
+</ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="6">
-	<li style="text-align:justify"><strong>Controle de correio</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Controle de correio</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -189,15 +191,15 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="8">
-	<li style="text-align:justify"><strong>Notifica&ccedil;&atilde;o de correspond&ecirc;ncia</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Notifica&ccedil;&atilde;o de correspond&ecirc;ncia</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -207,19 +209,21 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Thiago</strong></p>
+<ul>
+	<li style="text-align: justify;"><span style="font-size:18px"><strong>Thiago</strong></span></li>
+</ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="9">
-	<li style="text-align:justify"><strong>Cadastrar usu&aacute;rios do sistema</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Cadastrar usu&aacute;rios do sistema</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -229,15 +233,15 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 3</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="3">
-	<li style="text-align:justify"><strong>Transpar&ecirc;ncia das contas do condom&iacute;nio</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Transpar&ecirc;ncia das contas do condom&iacute;nio</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -247,19 +251,21 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 2</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
-<p style="text-align:justify"><strong>Gabriel</strong></p>
+<ul>
+	<li style="text-align: justify;"><span style="font-size:18px"><strong>Gabriel</strong></span></li>
+</ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="10">
-	<li style="text-align:justify"><strong>Possuir mural de avisos destinado a veicula&ccedil;&atilde;o de informa&ccedil;&otilde;es diversas</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Possuir mural de avisos destinado a veicula&ccedil;&atilde;o de informa&ccedil;&otilde;es diversas</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -269,15 +275,15 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
 <p style="text-align:justify">&nbsp;</p>
 
 <ol start="7">
-	<li style="text-align:justify"><strong>Possuir um meio de valida&ccedil;&atilde;o da presta&ccedil;&atilde;o de contas da administra&ccedil;&atilde;o</strong></li>
+	<li style="text-align:justify"><span style="font-size:16px"><strong>Possuir um meio de valida&ccedil;&atilde;o da presta&ccedil;&atilde;o de contas da administra&ccedil;&atilde;o</strong></span></li>
 </ol>
 
 <p style="text-align:justify">&nbsp;</p>
@@ -287,8 +293,8 @@
 <p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 <ul>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (valor): 2</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (valor): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
