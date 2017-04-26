@@ -108,7 +108,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 2</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
@@ -126,7 +126,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
@@ -150,7 +150,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
@@ -234,7 +234,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 3</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
@@ -252,7 +252,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 2</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 3</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
@@ -276,7 +276,7 @@
 
 <ul>
 	<li style="text-align:justify">Classifica&ccedil;&atilde;o cliente (relev&acirc;ncia): 1</li>
-	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 1</li>
+	<li style="text-align:justify">Classifica&ccedil;&atilde;o desenvolvedor (dificuldade): 2</li>
 	<li style="text-align:justify">Tempo estimado de desenvolvimento:</li>
 </ul>
 
