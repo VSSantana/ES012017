@@ -77,7 +77,7 @@ Histórias de usuários: Sistema de administração condominial
 	Classificação desenvolvedor (valor): 3
 	Tempo estimado de desenvolvimento:
   
-3.Transparência das contas do condomínio
+3.Balanço do mês
 
 	Como morador eu quero visualisar o relatório financeiro e o balanço do exercício.
 	Para exercer a fiscalização das contas do condomínio.
