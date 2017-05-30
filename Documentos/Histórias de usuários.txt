@@ -107,3 +107,8 @@ Histórias de usuários: Sistema de administração condominial
 	Classificação cliente (valor): 2
 	Classificação desenvolvedor (valor): 2
 	Tempo estimado de desenvolvimento:
+	
+-----------------------------------------------------------------------------------
+
+13.Manter valor da taxa de condomínio
+14.Manter itens de reserva
