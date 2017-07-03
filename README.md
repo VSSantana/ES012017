@@ -2,7 +2,7 @@
 
 <html>
 	<body>
-		<div>
+		<div style="text-align: justify;">
 			<strong style="text-align: justify;">Projeto</strong></div>
 		<div style="text-align: justify;">
 			<p>
@@ -481,7 +481,9 @@
 				A terceira li&ccedil;&atilde;o aprendida est&aacute; em tentar agregar valor ao projeto desenvolvido com diferenciais, nos casos em que um produto j&aacute; exista no mercado. Assim, achamos v&aacute;lido pesquisar outros produtos semelhantes antes do desenvolvimento de forma a propor inova&ccedil;&otilde;es para um cliente espec&iacute;fico.</p>
 			<p>
 				A quarta li&ccedil;&atilde;o &eacute; tentar combinar um padr&atilde;o de testes de unidade, onde possam ser identificados elementos comuns a serem testados e se estabele&ccedil;a o padr&atilde;o para a organiza&ccedil;&atilde;o dos testes.</p>
-			A quinta li&ccedil;&atilde;o que achamos relevante &eacute; a de utilizar o m&aacute;ximo de ferramenta que estiver sendo utilizado. Poder&iacute;amos ter concentrado todo o projeto dentro do Apex, mas decidimos explorar outras para expandir os conhecimentos, por&eacute;m durante o projeto surgiram alguns problemas causados pelo uso de v&aacute;rias ferramentas ao mesmo tempo, como manter os arquivos atualizados no GitHub.</div>
+			<p>
+				A quinta li&ccedil;&atilde;o que achamos relevante &eacute; a de utilizar o m&aacute;ximo de ferramenta que estiver sendo utilizado. Poder&iacute;amos ter concentrado todo o projeto dentro do Apex, mas decidimos explorar outras para expandir os conhecimentos, por&eacute;m durante o projeto surgiram alguns problemas causados pelo uso de v&aacute;rias ferramentas ao mesmo tempo, como manter os arquivos atualizados no GitHub.</p>
+		</div>
 		<p>
 			&nbsp;</p>
 	</body>
