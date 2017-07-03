@@ -1,7 +1,11 @@
-C:\Users\Vitor\Desktop\unb\es2017>python selenium_teste.py
-testPage1 (__main__.GoogleTestCase) ... ok
+K:\PORRA\Selenium_test>python selenium_teste_total.py > result.txt
+testPage2 (__main__.SiscondTestCaseCorreio) ... ok
+testPage1 (__main__.SiscondTestCaseMural) ... ok
+testPage6 (__main__.SiscondTestCasePrestacao) ... ok
+testPage3 (__main__.SiscondTestCaseReserva) ... ok
+testPage4 (__main__.SiscondTestCaseTaxaCondominio) ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 12.262s
+Ran 5 tests in 62.748s
 
 OK
