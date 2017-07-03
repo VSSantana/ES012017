@@ -7,12 +7,13 @@
 --
 -- Error Conditions Raised: Incorrect parameters passed.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Danilo Yuji Fukuda
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 01 MAY 2017    V. S. Santana         Created
+-- 12 MAY 2017    D. Y. Fukuda         Created
+-- 12 MAY 2017    V. S. Santana        Pattern correction
 -- **************************************************************
 
 CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_FEE_VALUE" RETURN VARCHAR2

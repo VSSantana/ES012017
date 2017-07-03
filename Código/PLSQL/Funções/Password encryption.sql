@@ -7,12 +7,13 @@
 --
 -- Error Conditions Raised: No erros raised.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Danilo Yuji Fukuda
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 01 MAY 2017    V. S. Santana         Created
+-- 15 MAY 2017    D. Y. Fukuda         Created
+-- 17 MAY 2017    V. S. Santana      Pattern correction
 -- **************************************************************
 
 create or replace function "F_RETURN_ENCRYPTED_PASSWORD" (pPassword IN VARCHAR2) RETURN VARCHAR2
@@ -24,6 +25,12 @@ BEGIN
 
   --Given a password a database tool uses MD5 algorithm to encrypt the password. 
 
+  IF(pPassword IS NULL) THEN
+  
+    RETURN NULL;
+    
+  END IF;
+  
   vEncryptedPassword := RAWTOHEX(dbms_obfuscation_toolkit.md5(INPUT => utl_raw.cast_to_raw(pPassword)));  
   
   RETURN vEncryptedPassword;  

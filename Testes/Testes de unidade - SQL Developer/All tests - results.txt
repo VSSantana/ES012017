@@ -1,0 +1,444 @@
+<?xml version = '1.0' encoding = 'Cp1252'?>
+<UT>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="c8418e47-08e4-48a4-9667-c6c8a90522f4" name="F_FORMAT_STRING_TO_NUMBER_CPF" obj_name="F_FORMAT_STRING_TO_NUMBER_CPF" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="9dbef760-e719-4935-a306-72e880739650" owner="ES012017" object_name="F_FORMAT_STRING_TO_NUMBER_CPF" object_id="96861" position="0" sequence="1" data_level="0" data_type="NVARCHAR2" in_out="OUT" character_set_name="NCHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <arg id="b57e7492-cd12-4a05-aa22-e7e4a15de2b8" owner="ES012017" object_name="F_FORMAT_STRING_TO_NUMBER_CPF" object_id="96861" argument_name="PSTRING" position="1" sequence="2" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <test_impl id="3ddb4018-300a-4add-83e3-5f21307f4788" test_id="c8418e47-08e4-48a4-9667-c6c8a90522f4" name="CPF inválido" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="9dbef760-e719-4935-a306-72e880739650" utiId="3ddb4018-300a-4add-83e3-5f21307f4788" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot;/>" test_out_val="true"/>
+            <parm argId="b57e7492-cd12-4a05-aa22-e7e4a15de2b8" utiId="3ddb4018-300a-4add-83e3-5f21307f4788" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PSTRING&quot;>9283jd8aj21i&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="6ed1a2e5-542d-42e1-b8a7-e4ec0ef338a9" test_id="c8418e47-08e4-48a4-9667-c6c8a90522f4" name="CPF nulo" expected_ret="" expected_err="">
+            <parm argId="9dbef760-e719-4935-a306-72e880739650" utiId="6ed1a2e5-542d-42e1-b8a7-e4ec0ef338a9" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot;/>" test_out_val="true"/>
+            <parm argId="b57e7492-cd12-4a05-aa22-e7e4a15de2b8" utiId="6ed1a2e5-542d-42e1-b8a7-e4ec0ef338a9" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PSTRING&quot;/>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="27eccd02-a509-47a9-8da2-082a19d4eeeb" test_id="c8418e47-08e4-48a4-9667-c6c8a90522f4" name="CPF válido" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="9dbef760-e719-4935-a306-72e880739650" utiId="27eccd02-a509-47a9-8da2-082a19d4eeeb" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>09898727176&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="b57e7492-cd12-4a05-aa22-e7e4a15de2b8" utiId="27eccd02-a509-47a9-8da2-082a19d4eeeb" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PSTRING&quot;>098.987.271-76&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="56c0be61-fd03-498e-94cb-0757aa52c132" name="F_NUMBERS_ONLY" obj_name="F_NUMBERS_ONLY" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="85fb2ea7-aa5c-4352-825d-601a08bdf084" owner="ES012017" object_name="F_NUMBERS_ONLY" object_id="96862" position="0" sequence="1" data_level="0" data_type="PL/SQL BOOLEAN" in_out="OUT" pls_type="BOOLEAN" char_length="0" char_used="0"/>
+         <arg id="38f1a484-fc29-40a1-ae76-5e3510a0a283" owner="ES012017" object_name="F_NUMBERS_ONLY" object_id="96862" argument_name="PSTRING" position="1" sequence="2" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <test_impl id="6a35b69f-3733-40a3-90ae-2bb4ace8a965" test_id="56c0be61-fd03-498e-94cb-0757aa52c132" name="String inválida" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="38f1a484-fc29-40a1-ae76-5e3510a0a283" utiId="6a35b69f-3733-40a3-90ae-2bb4ace8a965" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PSTRING&quot;>14656u38&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="85fb2ea7-aa5c-4352-825d-601a08bdf084" utiId="6a35b69f-3733-40a3-90ae-2bb4ace8a965" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="20ba0f24-b5b8-4beb-9f94-ebca11ae743f" test_id="56c0be61-fd03-498e-94cb-0757aa52c132" name="String nula" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="38f1a484-fc29-40a1-ae76-5e3510a0a283" utiId="20ba0f24-b5b8-4beb-9f94-ebca11ae743f" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PSTRING&quot;/>" test_out_val="true"/>
+            <parm argId="85fb2ea7-aa5c-4352-825d-601a08bdf084" utiId="20ba0f24-b5b8-4beb-9f94-ebca11ae743f" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="86723961-1ef0-43a9-8f44-49ad268dccec" test_id="56c0be61-fd03-498e-94cb-0757aa52c132" name="String válida" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="38f1a484-fc29-40a1-ae76-5e3510a0a283" utiId="86723961-1ef0-43a9-8f44-49ad268dccec" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PSTRING&quot;>12345678907&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="85fb2ea7-aa5c-4352-825d-601a08bdf084" utiId="86723961-1ef0-43a9-8f44-49ad268dccec" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>true&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="34199e9e-2675-46ff-8d3d-9b5ca7f7f460" name="F_RETURN_COD_GRUPO_CONTAS" obj_name="F_RETURN_COD_GRUPO_CONTAS" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="c6ab69c7-8141-43c5-a90d-3f4e0351c8b5" owner="ES012017" object_name="F_RETURN_COD_GRUPO_CONTAS" object_id="96863" position="0" sequence="1" data_level="0" data_type="NUMBER" in_out="OUT" data_length="22" radix="10" pls_type="NUMBER" char_length="0" char_used="0"/>
+         <arg id="9322a183-8784-4613-ad68-2ea939485a14" owner="ES012017" object_name="F_RETURN_COD_GRUPO_CONTAS" object_id="96863" argument_name="PCODPLANOCONTAS" position="1" sequence="2" data_level="0" data_type="NUMBER" in_out="IN" data_length="22" radix="10" pls_type="NUMBER" char_length="0" char_used="0"/>
+         <startup id="c2c70fdf-087f-49f5-b55f-de75be7e61ff">
+            <startup>
+               <class>oracle.dbtools.unit_test.startup.PlSqlStartup</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(261,
+                1,
+                'ATIVO',
+                NULL,
+                NULL,
+                'SYSTEM',
+                SYSTIMESTAMP);
+                
+    INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(262,
+                1.1,
+                'Ativo circulante',
+                NULL,
+                261,
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(261,
+                1,
+                'ATIVO',
+                NULL,
+                NULL,
+                'SYSTEM',
+                SYSTIMESTAMP);
+                
+    INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(262,
+                1.1,
+                'Ativo circulante',
+                NULL,
+                261,
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</code>
+            </startup>
+         </startup>
+         <teardown id="927c14ce-7d1d-4e0c-9ca0-500d36453a4d">
+            <teardown>
+               <class>oracle.dbtools.unit_test.teardown.PlSqlTeardown</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM tb_plano_de_contas;
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM tb_plano_de_contas;
+END;
+</code>
+            </teardown>
+         </teardown>
+         <test_impl id="2979ae2a-0d48-402a-9528-d89e84824d42" test_id="34199e9e-2675-46ff-8d3d-9b5ca7f7f460" name="Existing cod" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="c6ab69c7-8141-43c5-a90d-3f4e0351c8b5" utiId="2979ae2a-0d48-402a-9528-d89e84824d42" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>261&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="9322a183-8784-4613-ad68-2ea939485a14" utiId="2979ae2a-0d48-402a-9528-d89e84824d42" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCODPLANOCONTAS&quot;>262&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="1f665a98-94f9-4436-b11f-480d632bcc44" test_id="34199e9e-2675-46ff-8d3d-9b5ca7f7f460" name="Non existing cod" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="c6ab69c7-8141-43c5-a90d-3f4e0351c8b5" utiId="1f665a98-94f9-4436-b11f-480d632bcc44" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot;/>" test_out_val="true"/>
+            <parm argId="9322a183-8784-4613-ad68-2ea939485a14" utiId="1f665a98-94f9-4436-b11f-480d632bcc44" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCODPLANOCONTAS&quot;>263&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="c8b92758-d53f-454c-86c6-7a0f0114131f" name="F_RETURN_ENCRYPTED_PASSWORD" obj_name="F_RETURN_ENCRYPTED_PASSWORD" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="354716cc-047e-4f91-9d6c-ef19a024412b" owner="ES012017" object_name="F_RETURN_ENCRYPTED_PASSWORD" object_id="96866" position="0" sequence="1" data_level="0" data_type="VARCHAR2" in_out="OUT" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <arg id="585a84e5-6f98-4a53-867e-8e4f458716be" owner="ES012017" object_name="F_RETURN_ENCRYPTED_PASSWORD" object_id="96866" argument_name="PPASSWORD" position="1" sequence="2" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <test_impl id="bf92e347-bdac-49a3-9e08-c204be69c5da" test_id="c8b92758-d53f-454c-86c6-7a0f0114131f" name="Encriptação de senha" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="354716cc-047e-4f91-9d6c-ef19a024412b" utiId="bf92e347-bdac-49a3-9e08-c204be69c5da" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>E10ADC3949BA59ABBE56E057F20F883E&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="585a84e5-6f98-4a53-867e-8e4f458716be" utiId="bf92e347-bdac-49a3-9e08-c204be69c5da" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PPASSWORD&quot;>123456&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="229231a7-dcf7-4b41-8295-0a114554250a" test_id="c8b92758-d53f-454c-86c6-7a0f0114131f" name="Senha nula" expected_ret="" expected_err="">
+            <parm argId="354716cc-047e-4f91-9d6c-ef19a024412b" utiId="229231a7-dcf7-4b41-8295-0a114554250a" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot;/>" test_out_val="true"/>
+            <parm argId="585a84e5-6f98-4a53-867e-8e4f458716be" utiId="229231a7-dcf7-4b41-8295-0a114554250a" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PPASSWORD&quot;/>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="7967efd7-3786-44ba-ab80-6f46d790c1b7" name="F_RETURN_IF_GREATER_DAY" obj_name="F_RETURN_IF_GREATER_DAY" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="4a308914-dfdb-4f37-9d33-0fe1ee163894" owner="ES012017" object_name="F_RETURN_IF_GREATER_DAY" object_id="96868" position="0" sequence="1" data_level="0" data_type="PL/SQL BOOLEAN" in_out="OUT" pls_type="BOOLEAN" char_length="0" char_used="0"/>
+         <arg id="f4d21510-5da1-41ca-be69-cfdf0f06b534" owner="ES012017" object_name="F_RETURN_IF_GREATER_DAY" object_id="96868" argument_name="PDATEREFERENCE" position="1" sequence="2" data_level="0" data_type="DATE" in_out="IN" pls_type="DATE" char_length="0" char_used="0"/>
+         <arg id="ee75d42c-ff7e-45fb-94fd-696e8ca53067" owner="ES012017" object_name="F_RETURN_IF_GREATER_DAY" object_id="96868" argument_name="PDATE" position="2" sequence="3" data_level="0" data_type="DATE" in_out="IN" pls_type="DATE" char_length="0" char_used="0"/>
+         <test_impl id="9641f699-12ae-4b4a-afd7-a413ac7ace70" test_id="7967efd7-3786-44ba-ab80-6f46d790c1b7" name="Invalid dates" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="f4d21510-5da1-41ca-be69-cfdf0f06b534" utiId="9641f699-12ae-4b4a-afd7-a413ac7ace70" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PDATEREFERENCE&quot;>2017-05-03 00:00:00&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="4a308914-dfdb-4f37-9d33-0fe1ee163894" utiId="9641f699-12ae-4b4a-afd7-a413ac7ace70" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="ee75d42c-ff7e-45fb-94fd-696e8ca53067" utiId="9641f699-12ae-4b4a-afd7-a413ac7ace70" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PDATE&quot;>2017-05-02 00:00:00&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="adbc4902-0c16-4cd3-80bc-a6eb0b58fcf9" test_id="7967efd7-3786-44ba-ab80-6f46d790c1b7" name="NULL dates" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="f4d21510-5da1-41ca-be69-cfdf0f06b534" utiId="adbc4902-0c16-4cd3-80bc-a6eb0b58fcf9" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PDATEREFERENCE&quot;/>" test_out_val="true"/>
+            <parm argId="4a308914-dfdb-4f37-9d33-0fe1ee163894" utiId="adbc4902-0c16-4cd3-80bc-a6eb0b58fcf9" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="ee75d42c-ff7e-45fb-94fd-696e8ca53067" utiId="adbc4902-0c16-4cd3-80bc-a6eb0b58fcf9" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PDATE&quot;/>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="8bac25fb-6de3-49bf-97a1-a6fa016d77dc" test_id="7967efd7-3786-44ba-ab80-6f46d790c1b7" name="Valid dates" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="f4d21510-5da1-41ca-be69-cfdf0f06b534" utiId="8bac25fb-6de3-49bf-97a1-a6fa016d77dc" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PDATEREFERENCE&quot;>2017-05-03 00:00:00&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="4a308914-dfdb-4f37-9d33-0fe1ee163894" utiId="8bac25fb-6de3-49bf-97a1-a6fa016d77dc" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>true&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="ee75d42c-ff7e-45fb-94fd-696e8ca53067" utiId="8bac25fb-6de3-49bf-97a1-a6fa016d77dc" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PDATE&quot;>2017-05-04 00:00:00&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="9677b952-6e0b-43ca-83d6-aa4f55dae8dc" name="F_RETURN_IF_LEAP_YEAR" obj_name="F_RETURN_IF_LEAP_YEAR" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="false">
+         <arg id="2ae6b0d9-6d5f-41a8-ae20-32d6161eb711" owner="ES012017" object_name="F_RETURN_IF_LEAP_YEAR" object_id="96869" position="0" sequence="1" data_level="0" data_type="PL/SQL BOOLEAN" in_out="OUT" pls_type="BOOLEAN" char_length="0" char_used="0"/>
+         <arg id="0d5dc2cd-71f9-4fcd-8637-a816ddca1703" owner="ES012017" object_name="F_RETURN_IF_LEAP_YEAR" object_id="96869" argument_name="PYEAR" position="1" sequence="2" data_level="0" data_type="NUMBER" in_out="IN" data_length="22" radix="10" pls_type="NUMBER" char_length="0" char_used="0"/>
+         <test_impl id="1d0464fa-f5e8-45c2-aed7-ee9b3427339c" test_id="9677b952-6e0b-43ca-83d6-aa4f55dae8dc" name="Leap year" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="0d5dc2cd-71f9-4fcd-8637-a816ddca1703" utiId="1d0464fa-f5e8-45c2-aed7-ee9b3427339c" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PYEAR&quot;>2016&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="2ae6b0d9-6d5f-41a8-ae20-32d6161eb711" utiId="1d0464fa-f5e8-45c2-aed7-ee9b3427339c" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>true&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="474de975-b810-4f9c-840e-aa887e4e3b01" test_id="9677b952-6e0b-43ca-83d6-aa4f55dae8dc" name="Normal year" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="0d5dc2cd-71f9-4fcd-8637-a816ddca1703" utiId="474de975-b810-4f9c-840e-aa887e4e3b01" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PYEAR&quot;>2017&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="2ae6b0d9-6d5f-41a8-ae20-32d6161eb711" utiId="474de975-b810-4f9c-840e-aa887e4e3b01" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="c70cb1fb-3024-4969-9d52-4dc19d652c67" test_id="9677b952-6e0b-43ca-83d6-aa4f55dae8dc" name="Null year" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="0d5dc2cd-71f9-4fcd-8637-a816ddca1703" utiId="c70cb1fb-3024-4969-9d52-4dc19d652c67" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot; name=&quot;PYEAR&quot;/>" test_out_val="true"/>
+            <parm argId="2ae6b0d9-6d5f-41a8-ae20-32d6161eb711" utiId="c70cb1fb-3024-4969-9d52-4dc19d652c67" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="c91b29c5-70d6-4ca0-bcd1-83ae2909a093" name="F_RETURN_NUMERO_DA_CONTA" obj_name="F_RETURN_NUMERO_DA_CONTA" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="ebafeaf7-eda7-4eff-9025-8f0871ce8a64" owner="ES012017" object_name="F_RETURN_NUMERO_DA_CONTA" object_id="96871" position="0" sequence="1" data_level="0" data_type="VARCHAR2" in_out="OUT" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <arg id="26a6f256-43ca-4f6c-9251-234efe18e0a6" owner="ES012017" object_name="F_RETURN_NUMERO_DA_CONTA" object_id="96871" argument_name="PCODPLANOCONTAS" position="1" sequence="2" data_level="0" data_type="NUMBER" in_out="IN" data_length="22" radix="10" pls_type="NUMBER" char_length="0" char_used="0"/>
+         <startup id="569e2081-9aee-47c9-91e2-51de329c5ff2">
+            <startup>
+               <class>oracle.dbtools.unit_test.startup.PlSqlStartup</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(261,
+                '1',
+                'ATIVO',
+                NULL,
+                NULL,
+                'SYSTEM',
+                SYSTIMESTAMP);
+                
+    INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(262,
+                '1.1',
+                'Ativo circulante',
+                NULL,
+                261,
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(261,
+                '1',
+                'ATIVO',
+                NULL,
+                NULL,
+                'SYSTEM',
+                SYSTIMESTAMP);
+                
+    INSERT INTO tb_plano_de_contas(cod,
+                                 numero_da_conta,
+                                 nome_da_conta,
+                                 descr_da_conta,
+                                 cod_plano_contas_superior,
+                                 login_atualizacao,
+                                 dt_atualizacao)
+         VALUES(262,
+                '1.1',
+                'Ativo circulante',
+                NULL,
+                261,
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</code>
+            </startup>
+         </startup>
+         <teardown id="bec04225-5b5e-4726-b578-948e2c13fe4e">
+            <teardown>
+               <class>oracle.dbtools.unit_test.teardown.PlSqlTeardown</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM TB_PLANO_DE_CONTAS;
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM TB_PLANO_DE_CONTAS;
+END;
+</code>
+            </teardown>
+         </teardown>
+         <test_impl id="360a20b8-39ef-4042-b14f-c17dad6c4a7b" test_id="c91b29c5-70d6-4ca0-bcd1-83ae2909a093" name="Implementação de Teste 1" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="ebafeaf7-eda7-4eff-9025-8f0871ce8a64" utiId="360a20b8-39ef-4042-b14f-c17dad6c4a7b" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>1.1&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="26a6f256-43ca-4f6c-9251-234efe18e0a6" utiId="360a20b8-39ef-4042-b14f-c17dad6c4a7b" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCODPLANOCONTAS&quot;>262&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="383b1bab-ac81-4747-83fb-64849ce9ee06" test_id="c91b29c5-70d6-4ca0-bcd1-83ae2909a093" name="None existing cod" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="ebafeaf7-eda7-4eff-9025-8f0871ce8a64" utiId="383b1bab-ac81-4747-83fb-64849ce9ee06" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue is_null=&quot;true&quot;/>" test_out_val="true"/>
+            <parm argId="26a6f256-43ca-4f6c-9251-234efe18e0a6" utiId="383b1bab-ac81-4747-83fb-64849ce9ee06" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCODPLANOCONTAS&quot;>263&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="f5a33d1f-1326-4de0-91d7-5c672b3c122b" name="F_VALID_CPF" obj_name="F_VALID_CPF" obj_owner="ES012017" obj_type="FUNCTION" obj_call="" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="1d808b28-1d44-4c0a-9aba-f815cb68ac0d" owner="ES012017" object_name="F_VALID_CPF" object_id="96877" position="0" sequence="1" data_level="0" data_type="PL/SQL BOOLEAN" in_out="OUT" pls_type="BOOLEAN" char_length="0" char_used="0"/>
+         <arg id="f15cb42c-f5b8-471f-8a2b-43b5e9402926" owner="ES012017" object_name="F_VALID_CPF" object_id="96877" argument_name="PCPF" position="1" sequence="2" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <test_impl id="83b53245-124f-407b-99d3-e1cc043d11e2" test_id="f5a33d1f-1326-4de0-91d7-5c672b3c122b" name="CPF inválido" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="f15cb42c-f5b8-471f-8a2b-43b5e9402926" utiId="83b53245-124f-407b-99d3-e1cc043d11e2" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCPF&quot;>11111111111&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="1d808b28-1d44-4c0a-9aba-f815cb68ac0d" utiId="83b53245-124f-407b-99d3-e1cc043d11e2" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="517a256d-ec0f-474c-a7d4-c3f513db7da7" test_id="f5a33d1f-1326-4de0-91d7-5c672b3c122b" name="CPF válido" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="f15cb42c-f5b8-471f-8a2b-43b5e9402926" utiId="517a256d-ec0f-474c-a7d4-c3f513db7da7" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;PCPF&quot;>76042272101&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="1d808b28-1d44-4c0a-9aba-f815cb68ac0d" utiId="517a256d-ec0f-474c-a7d4-c3f513db7da7" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>true&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtTest">
+      <test id="206481a1-a715-46d6-99bb-bca069b84a79" name="PKG_AUTHENTICATION.F_AUTHORIZES_USER" obj_name="PKG_AUTHENTICATION" obj_owner="ES012017" obj_type="FUNCTION" obj_call="F_AUTHORIZES_USER" src_conn_name="IdeConnections%23ES012017" coverage="true">
+         <arg id="3fb4df8f-3e1d-4192-b4d6-07ace756a2cf" owner="ES012017" object_name="F_AUTHORIZES_USER" package_name="PKG_AUTHENTICATION" object_id="96890" position="0" sequence="1" data_level="0" data_type="PL/SQL BOOLEAN" in_out="OUT" pls_type="BOOLEAN" char_length="0" char_used="0"/>
+         <arg id="1f322e7d-30e9-4c5d-9f44-36e8175a952f" owner="ES012017" object_name="F_AUTHORIZES_USER" package_name="PKG_AUTHENTICATION" object_id="96890" argument_name="P_USERNAME" position="1" sequence="2" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <arg id="412f8f95-c454-4498-b272-2ae1a7a80d83" owner="ES012017" object_name="F_AUTHORIZES_USER" package_name="PKG_AUTHENTICATION" object_id="96890" argument_name="P_PASSWORD" position="2" sequence="3" data_level="0" data_type="VARCHAR2" in_out="IN" character_set_name="CHAR_CS" pls_type="VARCHAR2" char_used="B"/>
+         <startup id="5151f697-63d5-4d8f-947f-4a45897958ad">
+            <startup>
+               <class>oracle.dbtools.unit_test.startup.PlSqlStartup</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO TB_PERFIL_DE_ACESSO(cod,
+                                  descr_perfil_acesso,
+                                  sigla_perfil_acesso)
+         VALUES(2,
+                'Condômino',
+                'Condômino');
+    
+  INSERT INTO TB_PERFIL_USUARIO(cod,
+                                cod_perfil_acesso,
+                                cpf,
+                                senha,
+                                inativado,
+                                login_atualizacao,
+                                dt_atualizacao)
+         VALUES(37,
+                2,
+                '67586536929',
+                'E10ADC3949BA59ABBE56E057F20F883E',
+                'N',
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar antes da
+--operação de teste ser chamada. Por exemplo:
+BEGIN
+    
+  INSERT INTO TB_PERFIL_DE_ACESSO(cod,
+                                  descr_perfil_acesso,
+                                  sigla_perfil_acesso)
+         VALUES(2,
+                'Condômino',
+                'Condômino');
+    
+  INSERT INTO TB_PERFIL_USUARIO(cod,
+                                cod_perfil_acesso,
+                                cpf,
+                                senha,
+                                inativado,
+                                login_atualizacao,
+                                dt_atualizacao)
+         VALUES(37,
+                2,
+                '67586536929',
+                'E10ADC3949BA59ABBE56E057F20F883E',
+                'N',
+                'SYSTEM',
+                SYSTIMESTAMP);
+    
+END;
+</code>
+            </startup>
+         </startup>
+         <teardown id="317254c0-d995-4c4f-aabd-bda7dcda54f1">
+            <teardown>
+               <class>oracle.dbtools.unit_test.teardown.PlSqlTeardown</class>
+               <name>Código PL/Sql do Usuário</name>
+               <description>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM TB_PERFIL_USUARIO;
+    DELETE FROM TB_PERFIL_DE_ACESSO;
+END;
+</description>
+               <code>-- Especifique um código qualquer que você deseja executar após a
+--operação de teste ter sido chamada. Por exemplo:
+BEGIN
+    DELETE FROM TB_PERFIL_USUARIO;
+    DELETE FROM TB_PERFIL_DE_ACESSO;
+END;
+</code>
+            </teardown>
+         </teardown>
+         <test_impl id="c997fb8c-7611-4703-9719-49fe2eb5bbe3" test_id="206481a1-a715-46d6-99bb-bca069b84a79" name="Existing user" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="412f8f95-c454-4498-b272-2ae1a7a80d83" utiId="c997fb8c-7611-4703-9719-49fe2eb5bbe3" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_PASSWORD&quot;>123456&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="1f322e7d-30e9-4c5d-9f44-36e8175a952f" utiId="c997fb8c-7611-4703-9719-49fe2eb5bbe3" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_USERNAME&quot;>67586536929&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="3fb4df8f-3e1d-4192-b4d6-07ace756a2cf" utiId="c997fb8c-7611-4703-9719-49fe2eb5bbe3" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>true&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="d97ed300-fd66-493f-b833-46013b2cb551" test_id="206481a1-a715-46d6-99bb-bca069b84a79" name="Incorrect password" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="412f8f95-c454-4498-b272-2ae1a7a80d83" utiId="d97ed300-fd66-493f-b833-46013b2cb551" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_PASSWORD&quot;>123457&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="1f322e7d-30e9-4c5d-9f44-36e8175a952f" utiId="d97ed300-fd66-493f-b833-46013b2cb551" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_USERNAME&quot;>&#x9;67586536929&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="3fb4df8f-3e1d-4192-b4d6-07ace756a2cf" utiId="d97ed300-fd66-493f-b833-46013b2cb551" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+         <test_impl id="2bff53ce-3971-4eb4-a338-6f4479f06c56" test_id="206481a1-a715-46d6-99bb-bca069b84a79" name="None existing user" expected_ret="Sucesso" expected_err="QUALQUER">
+            <parm argId="412f8f95-c454-4498-b272-2ae1a7a80d83" utiId="2bff53ce-3971-4eb4-a338-6f4479f06c56" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_PASSWORD&quot;>NOOB&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="1f322e7d-30e9-4c5d-9f44-36e8175a952f" utiId="2bff53ce-3971-4eb4-a338-6f4479f06c56" input_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue name=&quot;P_USERNAME&quot;>817263184712&lt;/DataValue>" test_out_val="true"/>
+            <parm argId="3fb4df8f-3e1d-4192-b4d6-07ace756a2cf" utiId="2bff53ce-3971-4eb4-a338-6f4479f06c56" output_value="&lt;?xml version = '1.0' encoding = 'UTF-8'?>&#xD;&#xA;&lt;DataValue>false&lt;/DataValue>" test_out_val="true"/>
+         </test_impl>
+      </test>
+   </object>
+   <object class="oracle.dbtools.unit_test.testObjects.UtSuite">
+      <suite id="3cc584cb-2a46-466a-80d6-bc4ef1cd8182" name="All tests" coverage="false" source_conn_name="">
+         <suite_item test_id="c8418e47-08e4-48a4-9667-c6c8a90522f4" run_start="true" run_teardown="true"/>
+         <suite_item test_id="56c0be61-fd03-498e-94cb-0757aa52c132" run_start="true" run_teardown="true"/>
+         <suite_item test_id="34199e9e-2675-46ff-8d3d-9b5ca7f7f460" run_start="true" run_teardown="true"/>
+         <suite_item test_id="c8b92758-d53f-454c-86c6-7a0f0114131f" run_start="true" run_teardown="true"/>
+         <suite_item test_id="7967efd7-3786-44ba-ab80-6f46d790c1b7" run_start="true" run_teardown="true"/>
+         <suite_item test_id="9677b952-6e0b-43ca-83d6-aa4f55dae8dc" run_start="true" run_teardown="true"/>
+         <suite_item test_id="c91b29c5-70d6-4ca0-bcd1-83ae2909a093" run_start="true" run_teardown="true"/>
+         <suite_item test_id="f5a33d1f-1326-4de0-91d7-5c672b3c122b" run_start="true" run_teardown="true"/>
+         <suite_item test_id="206481a1-a715-46d6-99bb-bca069b84a79" run_start="true" run_teardown="true"/>
+      </suite>
+   </object>
+</UT>

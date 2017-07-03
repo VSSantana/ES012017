@@ -7,12 +7,13 @@
 --
 -- Error Conditions Raised: CPF number doesn't match it's formation law.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Thiago Xavier da Silva
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 01 MAY 2017    V. S. Santana         Created
+-- 13 MAY 2017    T. S. Silva         Created
+-- 15 MAY 2017    V. S. Santana       Pattern correction
 -- **************************************************************
 
 create or replace FUNCTION "F_VALID_CPF" (pCpf IN VARCHAR2) RETURN BOOLEAN

@@ -7,12 +7,14 @@
 --
 -- Error Conditions Raised: Incorrect parameters passed.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Gabriel de Carvalho Tollini
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 07 MAY 2017    V. S. Santana         Created
+-- 11 MAY 2017    G. C. Tollini       Created
+-- 15 MAY 2017    V. S. Santana       Pattern correction
+-- 17 MAY 2017    V. T. P. Costa      Code correction
 -- **************************************************************
 
 CREATE OR REPLACE EDITIONABLE FUNCTION  "F_TOTAL_MONTHLY_PAYMENT" (pReferenceDate IN DATE) RETURN NUMBER

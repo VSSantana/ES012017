@@ -8,12 +8,13 @@
 --
 -- Error Conditions Raised: No erros raised.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Danilo Yuji Fukuda
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 01 MAY 2017    V. S. Santana         Created
+-- 05 MAY 2017    D. Y. Fukuda        Created
+-- 17 MAY 2017    V. S. Santana       Pattern and code correction
 -- **************************************************************
 
 create or replace function "F_RETURN_RANDOM_PASSWORD" RETURN VARCHAR2

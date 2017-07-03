@@ -1,7 +1,0 @@
-C:\Users\Vitor\Desktop\unb\es2017>python selenium_teste.py
-testPage1 (__main__.GoogleTestCase) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 12.262s
-
-OK

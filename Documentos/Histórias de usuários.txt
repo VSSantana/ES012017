@@ -1,4 +1,6 @@
-Histórias de usuários: Sistema de administração condominial
+﻿Histórias de usuários: Sistema de administração condominial
+
+1ª Iteração
 
 - Danilo
 
@@ -8,8 +10,8 @@ Histórias de usuários: Sistema de administração condominial
 	Para garantir a segurança das informações disponibilizadas.
 	
 	Classificação cliente (valor): 2
-	Classificação desenvolvedor (valor): 3
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 2
+	Tempo estimado de desenvolvimento: 1
   
 4.Controle individual de taxas de condomínio
 
@@ -17,8 +19,8 @@ Histórias de usuários: Sistema de administração condominial
 	Para controlar os pagamentos e confirmar as quitações já realizadas.
 	
 	Classificação cliente (valor): 1
-	Classificação desenvolvedor (valor): 1
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 3
+	Tempo estimado de desenvolvimento: 1
   
 -----------------------------------------------------------------------------------
 
@@ -30,8 +32,8 @@ Histórias de usuários: Sistema de administração condominial
 	Para garantir a disponibilidade do espaço em uma data específica.
 	
 	Classificação cliente (valor): 1
-	Classificação desenvolvedor (valor): 1
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 2
+	Tempo estimado de desenvolvimento: 1
 
 5.Cadastro de receitas e despesas
 
@@ -40,7 +42,7 @@ Histórias de usuários: Sistema de administração condominial
 	
 	Classificação cliente (valor): 3
 	Classificação desenvolvedor (valor): 3
-	Tempo estimado de desenvolvimento:
+	Tempo estimado de desenvolvimento: 1
 
 -----------------------------------------------------------------------------------
 
@@ -53,7 +55,7 @@ Histórias de usuários: Sistema de administração condominial
 	
 	Classificação cliente (valor): 1
 	Classificação desenvolvedor (valor): 1
-	Tempo estimado de desenvolvimento:
+	Tempo estimado de desenvolvimento: 1
 
 8.Notificação de correspondência
 
@@ -62,7 +64,7 @@ Histórias de usuários: Sistema de administração condominial
 	
 	Classificação cliente (valor): 1
 	Classificação desenvolvedor (valor): 1
-	Tempo estimado de desenvolvimento:
+	Tempo estimado de desenvolvimento: 1
 
 -----------------------------------------------------------------------------------
 
@@ -74,17 +76,17 @@ Histórias de usuários: Sistema de administração condominial
 	Para definir o perfil de acesso do indivíduo.
 	
 	Classificação cliente (valor): 3
-	Classificação desenvolvedor (valor): 3
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 1
+	Tempo estimado de desenvolvimento: 1
   
-3.Balanço do mês
+3.Transparência das contas do condomínio
 
 	Como morador eu quero visualisar o relatório financeiro e o balanço do exercício.
 	Para exercer a fiscalização das contas do condomínio.
 	
 	Classificação cliente (valor): 2
-	Classificação desenvolvedor (valor): 2
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 3
+	Tempo estimado de desenvolvimento: 2
 
 -----------------------------------------------------------------------------------
 
@@ -96,19 +98,51 @@ Histórias de usuários: Sistema de administração condominial
 	Para que eu consiga a colaboração e/ou atenção dos demais usuários.
 	
 	Classificação cliente (valor): 1
-	Classificação desenvolvedor (valor): 1
-	Tempo estimado de desenvolvimento:
+	Classificação desenvolvedor (valor): 2
+	Tempo estimado de desenvolvimento: 1
   
-7.Possuir um meio de validação da prestação de contas da administração
+7.Possuir um meio de validação da prestação de contas da administração (Cancelada)
 
 	Como membro do conselho fiscal eu quero validar as contas prestadas pela administração.
 	Para garantir a gestão efetiva dos recursos financeiros do condomínio.
 	
 	Classificação cliente (valor): 2
 	Classificação desenvolvedor (valor): 2
-	Tempo estimado de desenvolvimento:
-	
+	Tempo estimado de desenvolvimento: 1
+
 -----------------------------------------------------------------------------------
 
-13.Manter valor da taxa de condomínio
-14.Manter itens de reserva
+2ª Iteração
+
+• Danilo e Vinicius
+
+11.Redefinição de senha
+
+	Como usuário eu quero redefinir minha senha para acessar o sistema quando não lembrar mais da senha.
+
+	• Classificação cliente (relevância): 2
+	• Classificação desenvolvedor (dificuldade): 2
+	• Tempo estimado de desenvolvimento (semanas): 2
+
+• Gabriel e Vinicius
+
+12. Esquema de autorização
+
+	Como cliente eu quero que o sistema tenha suas funcionalidades e páginas disponibilizadas 
+	para perfis de acesso compatíveis para poder assegurar o correto funcionamento e interação 
+	dos usuários com o sistema.
+
+	• Classificação cliente (relevância): 2
+	• Classificação desenvolvedor (dificuldade): 3
+	• Tempo estimado de desenvolvimento (semanas): 2
+
+• Thiago e Vitor
+
+13. Cadastro de funcionário
+
+	Como administrador eu quero cadastrar funcionários no sistema para que controlar as informações 
+	destes e permitir seu acesso de maneira que possam executar algumas funções através deste.
+
+	• Classificação cliente (relevância): 2
+	• Classificação desenvolvedor (dificuldade): 3
+	• Tempo estimado de desenvolvimento (semanas): 2

@@ -1,0 +1,2473 @@
+CREATE TABLE  "APEX$TEAM_DEV_FILES" 
+   (	"ID" NUMBER, 
+	"ROW_VERSION_NUMBER" NUMBER, 
+	"COMPONENT_ID" NUMBER NOT NULL ENABLE, 
+	"COMPONENT_TYPE" VARCHAR2(30) NOT NULL ENABLE, 
+	"FILENAME" VARCHAR2(4000) NOT NULL ENABLE, 
+	"FILE_MIMETYPE" VARCHAR2(512), 
+	"FILE_CHARSET" VARCHAR2(512), 
+	"FILE_BLOB" BLOB, 
+	"FILE_COMMENTS" VARCHAR2(4000), 
+	"TAGS" VARCHAR2(4000), 
+	"CREATED" TIMESTAMP (6) WITH LOCAL TIME ZONE, 
+	"CREATED_BY" VARCHAR2(255), 
+	"UPDATED" TIMESTAMP (6) WITH LOCAL TIME ZONE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "WWV_VALID_ATDF_COMP_TY" CHECK (component_type in ('MILESTONE','FEATURE','BUG','FEEDBACK','TODO')) ENABLE, 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_ACL" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"USERNAME" VARCHAR2(255) NOT NULL ENABLE, 
+	"PRIV" VARCHAR2(1) NOT NULL ENABLE, 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_ACL_PRIV_CK" CHECK (priv in ('R','C','A')) ENABLE, 
+	 CONSTRAINT "APEX$_ACL_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_ROWS" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER NOT NULL ENABLE, 
+	"UNIQUE_VALUE" VARCHAR2(255), 
+	"TAGS" VARCHAR2(4000), 
+	"PARENT_ROW_ID" NUMBER, 
+	"OWNER" VARCHAR2(255), 
+	"GEOCODE" VARCHAR2(512), 
+	"LOAD_ORDER" NUMBER, 
+	"CHANGE_COUNT" NUMBER, 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	"C001" VARCHAR2(4000), 
+	"C002" VARCHAR2(4000), 
+	"C003" VARCHAR2(4000), 
+	"C004" VARCHAR2(4000), 
+	"C005" VARCHAR2(4000), 
+	"C006" VARCHAR2(4000), 
+	"C007" VARCHAR2(4000), 
+	"C008" VARCHAR2(4000), 
+	"C009" VARCHAR2(4000), 
+	"C010" VARCHAR2(4000), 
+	"C011" VARCHAR2(4000), 
+	"C012" VARCHAR2(4000), 
+	"C013" VARCHAR2(4000), 
+	"C014" VARCHAR2(4000), 
+	"C015" VARCHAR2(4000), 
+	"C016" VARCHAR2(4000), 
+	"C017" VARCHAR2(4000), 
+	"C018" VARCHAR2(4000), 
+	"C019" VARCHAR2(4000), 
+	"C020" VARCHAR2(4000), 
+	"C021" VARCHAR2(4000), 
+	"C022" VARCHAR2(4000), 
+	"C023" VARCHAR2(4000), 
+	"C024" VARCHAR2(4000), 
+	"C025" VARCHAR2(4000), 
+	"C026" VARCHAR2(4000), 
+	"C027" VARCHAR2(4000), 
+	"C028" VARCHAR2(4000), 
+	"C029" VARCHAR2(4000), 
+	"C030" VARCHAR2(4000), 
+	"C031" VARCHAR2(4000), 
+	"C032" VARCHAR2(4000), 
+	"C033" VARCHAR2(4000), 
+	"C034" VARCHAR2(4000), 
+	"C035" VARCHAR2(4000), 
+	"C036" VARCHAR2(4000), 
+	"C037" VARCHAR2(4000), 
+	"C038" VARCHAR2(4000), 
+	"C039" VARCHAR2(4000), 
+	"C040" VARCHAR2(4000), 
+	"C041" VARCHAR2(4000), 
+	"C042" VARCHAR2(4000), 
+	"C043" VARCHAR2(4000), 
+	"C044" VARCHAR2(4000), 
+	"C045" VARCHAR2(4000), 
+	"C046" VARCHAR2(4000), 
+	"C047" VARCHAR2(4000), 
+	"C048" VARCHAR2(4000), 
+	"C049" VARCHAR2(4000), 
+	"C050" VARCHAR2(4000), 
+	"N001" NUMBER, 
+	"N002" NUMBER, 
+	"N003" NUMBER, 
+	"N004" NUMBER, 
+	"N005" NUMBER, 
+	"N006" NUMBER, 
+	"N007" NUMBER, 
+	"N008" NUMBER, 
+	"N009" NUMBER, 
+	"N010" NUMBER, 
+	"N011" NUMBER, 
+	"N012" NUMBER, 
+	"N013" NUMBER, 
+	"N014" NUMBER, 
+	"N015" NUMBER, 
+	"N016" NUMBER, 
+	"N017" NUMBER, 
+	"N018" NUMBER, 
+	"N019" NUMBER, 
+	"N020" NUMBER, 
+	"N021" NUMBER, 
+	"N022" NUMBER, 
+	"N023" NUMBER, 
+	"N024" NUMBER, 
+	"N025" NUMBER, 
+	"N026" NUMBER, 
+	"N027" NUMBER, 
+	"N028" NUMBER, 
+	"N029" NUMBER, 
+	"N030" NUMBER, 
+	"N031" NUMBER, 
+	"N032" NUMBER, 
+	"N033" NUMBER, 
+	"N034" NUMBER, 
+	"N035" NUMBER, 
+	"N036" NUMBER, 
+	"N037" NUMBER, 
+	"N038" NUMBER, 
+	"N039" NUMBER, 
+	"N040" NUMBER, 
+	"N041" NUMBER, 
+	"N042" NUMBER, 
+	"N043" NUMBER, 
+	"N044" NUMBER, 
+	"N045" NUMBER, 
+	"N046" NUMBER, 
+	"N047" NUMBER, 
+	"N048" NUMBER, 
+	"N049" NUMBER, 
+	"N050" NUMBER, 
+	"D001" DATE, 
+	"D002" DATE, 
+	"D003" DATE, 
+	"D004" DATE, 
+	"D005" DATE, 
+	"D006" DATE, 
+	"D007" DATE, 
+	"D008" DATE, 
+	"D009" DATE, 
+	"D010" DATE, 
+	"D011" DATE, 
+	"D012" DATE, 
+	"D013" DATE, 
+	"D014" DATE, 
+	"D015" DATE, 
+	"D016" DATE, 
+	"D017" DATE, 
+	"D018" DATE, 
+	"D019" DATE, 
+	"D020" DATE, 
+	"D021" DATE, 
+	"D022" DATE, 
+	"D023" DATE, 
+	"D024" DATE, 
+	"D025" DATE, 
+	"D026" DATE, 
+	"D027" DATE, 
+	"D028" DATE, 
+	"D029" DATE, 
+	"D030" DATE, 
+	"D031" DATE, 
+	"D032" DATE, 
+	"D033" DATE, 
+	"D034" DATE, 
+	"D035" DATE, 
+	"D036" DATE, 
+	"D037" DATE, 
+	"D038" DATE, 
+	"D039" DATE, 
+	"D040" DATE, 
+	"D041" DATE, 
+	"D042" DATE, 
+	"D043" DATE, 
+	"D044" DATE, 
+	"D045" DATE, 
+	"D046" DATE, 
+	"D047" DATE, 
+	"D048" DATE, 
+	"D049" DATE, 
+	"D050" DATE, 
+	"CLOB001" CLOB, 
+	"SEARCH_CLOB" CLOB, 
+	 CONSTRAINT "APEX$_WS_ROWS_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "APEX$_WS_ROWS_UK1" UNIQUE ("WS_APP_ID", "DATA_GRID_ID", "UNIQUE_VALUE")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_FILES" 
+   (	"ID" NUMBER, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER, 
+	"ROW_ID" NUMBER, 
+	"WEBPAGE_ID" NUMBER, 
+	"COMPONENT_LEVEL" VARCHAR2(30), 
+	"NAME" VARCHAR2(255) NOT NULL ENABLE, 
+	"IMAGE_ALIAS" VARCHAR2(255), 
+	"IMAGE_ATTRIBUTES" VARCHAR2(255), 
+	"CONTENT" BLOB, 
+	"CONTENT_LAST_UPDATE" DATE, 
+	"MIME_TYPE" VARCHAR2(255) NOT NULL ENABLE, 
+	"CONTENT_CHARSET" VARCHAR2(255), 
+	"CONTENT_FILENAME" VARCHAR2(500), 
+	"DESCRIPTION" VARCHAR2(4000), 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_WS_FILES_CL_CK" CHECK (component_level in ('WEBSHEET','ROW','WORKSPACE','WEBPAGE')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_FILES_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_HISTORY" 
+   (	"ROW_ID" NUMBER NOT NULL ENABLE, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER NOT NULL ENABLE, 
+	"COLUMN_NAME" VARCHAR2(255), 
+	"OLD_VALUE" VARCHAR2(4000), 
+	"NEW_VALUE" VARCHAR2(4000), 
+	"APPLICATION_USER_ID" VARCHAR2(255), 
+	"CHANGE_DATE" DATE
+   )
+/
+CREATE TABLE  "APEX$_WS_LINKS" 
+   (	"ID" NUMBER, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER, 
+	"ROW_ID" NUMBER, 
+	"WEBPAGE_ID" NUMBER, 
+	"COMPONENT_LEVEL" VARCHAR2(30), 
+	"TAGS" VARCHAR2(4000), 
+	"SHOW_ON_HOMEPAGE" VARCHAR2(1), 
+	"LINK_NAME" VARCHAR2(255) NOT NULL ENABLE, 
+	"URL" VARCHAR2(4000) NOT NULL ENABLE, 
+	"LINK_DESCRIPTION" VARCHAR2(4000), 
+	"DISPLAY_SEQUENCE" NUMBER, 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_WS_LINKS_CL_CK" CHECK (component_level in ('WEBSHEET','ROW','WORKSPACE','WEBPAGE')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_LINKS_SH_CK" CHECK (show_on_homepage in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_LINKS_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_NOTES" 
+   (	"ID" NUMBER, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER, 
+	"ROW_ID" NUMBER, 
+	"WEBPAGE_ID" NUMBER, 
+	"COMPONENT_LEVEL" VARCHAR2(30), 
+	"CONTENT" CLOB, 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_WS_NOTES_CL_CK" CHECK (component_level in ('WEBSHEET','ROW','WORKSPACE','WEBPAGE')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_NOTES_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_TAGS" 
+   (	"ID" NUMBER, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"DATA_GRID_ID" NUMBER, 
+	"ROW_ID" NUMBER, 
+	"WEBPAGE_ID" NUMBER, 
+	"COMPONENT_LEVEL" VARCHAR2(30), 
+	"TAG" VARCHAR2(4000), 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_WS_TAGS_CL_CK" CHECK (component_level in ('WEBSHEET','ROW','WORKSPACE','WEBPAGE')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_TAGS_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_WEBPG_SECTIONS" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"WEBPAGE_ID" NUMBER, 
+	"DISPLAY_SEQUENCE" NUMBER, 
+	"SECTION_TYPE" VARCHAR2(30) NOT NULL ENABLE, 
+	"TITLE" VARCHAR2(4000), 
+	"CONTENT" CLOB, 
+	"CONTENT_UPPER" CLOB, 
+	"NAV_START_WEBPAGE_ID" NUMBER, 
+	"NAV_MAX_LEVEL" NUMBER, 
+	"NAV_ORDER_BY" VARCHAR2(255), 
+	"NAV_INCLUDE_LINK" VARCHAR2(1), 
+	"DATA_GRID_ID" NUMBER, 
+	"REPORT_ID" NUMBER, 
+	"DATA_SECTION_STYLE" NUMBER, 
+	"SHOW_ADD_ROW" VARCHAR2(1) DEFAULT 'N', 
+	"SHOW_EDIT_ROW" VARCHAR2(1) DEFAULT 'N', 
+	"SHOW_SEARCH" VARCHAR2(1) DEFAULT 'Y', 
+	"MAX_ROW_COUNT" NUMBER, 
+	"CHART_TYPE" VARCHAR2(255), 
+	"CHART_3D" VARCHAR2(1), 
+	"CHART_LABEL" VARCHAR2(255), 
+	"LABEL_AXIS_TITLE" VARCHAR2(255), 
+	"CHART_VALUE" VARCHAR2(255), 
+	"VALUE_AXIS_TITLE" VARCHAR2(255), 
+	"CHART_AGGREGATE" VARCHAR2(255), 
+	"CHART_SORTING" VARCHAR2(255), 
+	"CHANGE_COUNT" NUMBER, 
+	"CREATED_ON" DATE NOT NULL ENABLE, 
+	"CREATED_BY" VARCHAR2(255) NOT NULL ENABLE, 
+	"UPDATED_ON" DATE, 
+	"UPDATED_BY" VARCHAR2(255), 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_TYPE_CK" CHECK (section_type in ('TEXT','DATA','CHART','NAV_PAGE','NAV_SECTION','PLSQL')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_LINK_CK" CHECK (nav_include_link in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_AR_CK" CHECK (show_add_row in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_ER_CK" CHECK (show_edit_row in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_SER_CK" CHECK (show_search in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTION_3D_CK" CHECK (chart_3d in ('Y','N')) ENABLE, 
+	 CONSTRAINT "APEX$_WS_WEBPG_SECTIONS_PK" PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "APEX$_WS_WEBPG_SECTION_HISTORY" 
+   (	"SECTION_ID" NUMBER NOT NULL ENABLE, 
+	"WS_APP_ID" NUMBER NOT NULL ENABLE, 
+	"WEBPAGE_ID" NUMBER NOT NULL ENABLE, 
+	"OLD_DISPLAY_SEQUENCE" NUMBER, 
+	"NEW_DISPLAY_SEQUENCE" NUMBER, 
+	"OLD_TITLE" VARCHAR2(4000), 
+	"NEW_TITLE" VARCHAR2(4000), 
+	"OLD_CONTENT" CLOB, 
+	"NEW_CONTENT" CLOB, 
+	"APPLICATION_USER_ID" VARCHAR2(255) NOT NULL ENABLE, 
+	"CHANGE_DATE" DATE NOT NULL ENABLE
+   )
+/
+CREATE TABLE  "TB_ESTADO_CORREIO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"ESTADO_CORREIO" VARCHAR2(30) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_ESTADO_CORREIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_ESTADO_NOTIFICACAO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"ESTADO_NOTIFICACAO" VARCHAR2(30) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_ESTADO_NOTIFICACAO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_TIPO_CORREIO" 
+   (	"COD" NUMBER, 
+	"TIPO_CORREIO" VARCHAR2(30), 
+	 CONSTRAINT "TB_TIPO_CORREIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_USUARIO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"NOME" VARCHAR2(150) NOT NULL ENABLE, 
+	"RG" NUMBER NOT NULL ENABLE, 
+	"CPF" NVARCHAR2(20) NOT NULL ENABLE, 
+	"BLOCO" CHAR(1), 
+	"UNIDADE" NUMBER, 
+	"E_MAIL_01" VARCHAR2(150) NOT NULL ENABLE, 
+	"SEXO" CHAR(1) NOT NULL ENABLE, 
+	"TELEFONE" VARCHAR2(20) NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(100) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_USUARIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "TB_USUARIO_CON" UNIQUE ("RG", "CPF")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_UNIDADE" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"COD_USUARIO_RESPONSAVEL" NUMBER, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(100) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_UNIDADE_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_CORREIO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"COD_USUARIO_DESTINATARIO" NUMBER, 
+	"COD_UNIDADE" NUMBER, 
+	"COD_TIPO_CORREIO" NUMBER NOT NULL ENABLE, 
+	"DATA_RECEBIMENTO" DATE, 
+	"DATA_ENTREGA" DATE, 
+	"COD_ESTADO_NOTIFICACAO" NUMBER NOT NULL ENABLE, 
+	"COD_ESTADO_CORREIO" NUMBER NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(100) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_CORREIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_FUNCIONARIO" 
+   (	"COD" NUMBER, 
+	"NOME_FUNCIONARIO" NVARCHAR2(100) NOT NULL ENABLE, 
+	"CPF" NVARCHAR2(14) NOT NULL ENABLE, 
+	"RG" NVARCHAR2(20), 
+	"RG_UF" NVARCHAR2(2), 
+	"NUM_CARTEIRA_DE_TRABALHO" NCHAR(100), 
+	"NUM_PIS" NVARCHAR2(100), 
+	"ENDERECO" NVARCHAR2(200) NOT NULL ENABLE, 
+	"BAIRRO" NVARCHAR2(20) NOT NULL ENABLE, 
+	"CIDADE" NVARCHAR2(20) NOT NULL ENABLE, 
+	"UF" NCHAR(2) NOT NULL ENABLE, 
+	"CEP" NVARCHAR2(22), 
+	"DT_NASCIMENTO" DATE NOT NULL ENABLE, 
+	"E_MAIL_01" NVARCHAR2(50), 
+	"E_MAIL_02" NVARCHAR2(50), 
+	"FONE_COMERCIAL" NVARCHAR2(12) NOT NULL ENABLE, 
+	"FONE_RESIDENCIAL" NVARCHAR2(12), 
+	"FONE_CELULAR_01" NVARCHAR2(12) NOT NULL ENABLE, 
+	"SEXO" CHAR(1) NOT NULL ENABLE, 
+	"FONE_CELULAR_02" NVARCHAR2(12), 
+	"LOGIN_ATUALIZACAO" NVARCHAR2(60) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "FUNC_RG_UF_CK" CHECK ("RG_UF" IN ('AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO')) ENABLE, 
+	 CONSTRAINT "FUNC_SEXO_CK" CHECK ("SEXO" IN ('M','F','B')) ENABLE, 
+	 CONSTRAINT "TB_FUNCIONARIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_HIST_TAXA_COND" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"DT_INICIO" DATE NOT NULL ENABLE, 
+	"DT_FIM" DATE, 
+	"VALOR_TAXA" NUMBER(8,4) NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" NVARCHAR2(30) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_HIST_TAXA_COND_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_ITEM_DE_RESERVA" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"NOME" NVARCHAR2(150) NOT NULL ENABLE, 
+	"DESCRICAO" NVARCHAR2(350), 
+	"DISPONIBILIDADE" CHAR(1) NOT NULL ENABLE, 
+	"VALOR" NUMBER(12,2), 
+	"LOGIN_ATUALIZACAO" VARCHAR2(100), 
+	"DT_ATUALIZACAO" TIMESTAMP (6), 
+	 CONSTRAINT "TB_ITEM_DE_RESERVA_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_PLANO_DE_CONTAS" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"NUMERO_DA_CONTA" NVARCHAR2(12) NOT NULL ENABLE, 
+	"NOME_DA_CONTA" NVARCHAR2(150) NOT NULL ENABLE, 
+	"DESCR_DA_CONTA" NVARCHAR2(1000), 
+	"COD_PLANO_CONTAS_SUPERIOR" NUMBER, 
+	"LOGIN_ATUALIZACAO" NVARCHAR2(120) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_PLANO_DE_CONTAS_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_LANCAMENTO_CONTABIL" 
+   (	"COD" NUMBER, 
+	"DT_VENCIMENTO" DATE NOT NULL ENABLE, 
+	"NOME_DO_LANCAMENTO" NVARCHAR2(300) NOT NULL ENABLE, 
+	"VALOR_MONETARIO" NUMBER(12,2) NOT NULL ENABLE, 
+	"DT_REGISTRO_CONTABIL" DATE NOT NULL ENABLE, 
+	"COD_PLANO_CONTAS" NUMBER NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" NVARCHAR2(60) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	"DESCR_LANCAMENTO_CONTABIL" NVARCHAR2(1000), 
+	 CONSTRAINT "TB_LANCAMENTO_CONTABIL_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_MURAL_AVISO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"DATA_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(20) NOT NULL ENABLE, 
+	"DATA_INICIO" DATE NOT NULL ENABLE, 
+	"DATA_FIM" DATE NOT NULL ENABLE, 
+	"AVISO" VARCHAR2(1500) NOT NULL ENABLE, 
+	"TITULO" VARCHAR2(150) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_MURAL_AVISO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_PERFIL_DE_ACESSO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"DESCR_PERFIL_ACESSO" NVARCHAR2(1000), 
+	"SIGLA_PERFIL_ACESSO" NVARCHAR2(50) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_PERFIL_DE_ACESSO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_PERFIL_USUARIO" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"COD_PERFIL_ACESSO" NUMBER NOT NULL ENABLE, 
+	"CPF" NVARCHAR2(14) NOT NULL ENABLE, 
+	"SENHA" NVARCHAR2(100), 
+	"INATIVADO" CHAR(1) NOT NULL ENABLE, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(30) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_PERFIL_USUARIO_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "TB_PERFIL_USUARIO_CPF_UK" UNIQUE ("CPF")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_RECEITA_TAXA_COND" 
+   (	"COD" NUMBER, 
+	"ANO" NUMBER(4,0) NOT NULL ENABLE, 
+	"MES" NUMBER(2,0) NOT NULL ENABLE, 
+	"VALOR_MONETARIO" NUMBER(12,2) NOT NULL ENABLE, 
+	"COD_PLANO_CONTAS" NUMBER NOT NULL ENABLE, 
+	 CONSTRAINT "TB_RECEITA_TAXA_COND_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "TB_RECEITA_TAXA_ANO_MES_UK" UNIQUE ("ANO", "MES")
+  USING INDEX (CREATE UNIQUE INDEX  "RECEITA_MENSAL_ANO_MES_UK1" ON  "TB_RECEITA_TAXA_COND" ("ANO", "MES") 
+  )  ENABLE
+   )
+/
+CREATE TABLE  "TB_RESERVA" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"COD_USUARIO" NUMBER NOT NULL ENABLE, 
+	"COD_ITEM_DE_RESERVA" NUMBER NOT NULL ENABLE, 
+	"DT_RESERVA" DATE NOT NULL ENABLE, 
+	"CONFIRMADO" CHAR(1), 
+	"COD_LANCAMENTO_CONTABIL" NUMBER, 
+	"LOGIN_ATUALIZACAO" VARCHAR2(100) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	 CONSTRAINT "TB_RESERVA_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "TB_RESERVA_UK" UNIQUE ("DT_RESERVA", "COD_ITEM_DE_RESERVA")
+  USING INDEX  ENABLE
+   )
+/
+CREATE TABLE  "TB_TAXA_COND_PAGA" 
+   (	"COD" NUMBER NOT NULL ENABLE, 
+	"ANO" NUMBER(4,0) NOT NULL ENABLE, 
+	"MES" NUMBER(2,0) NOT NULL ENABLE, 
+	"VALOR_TAXA_PAGO" NUMBER(12,2) NOT NULL ENABLE, 
+	"CODIGO_DE_BARRAS" VARCHAR2(30), 
+	"LOGIN_ATUALIZACAO" VARCHAR2(30) NOT NULL ENABLE, 
+	"DT_ATUALIZACAO" TIMESTAMP (6) NOT NULL ENABLE, 
+	"COD_USUARIO" NUMBER NOT NULL ENABLE, 
+	"VALOR_JUROS" NUMBER(12,2), 
+	"VALOR_MULTA" NUMBER(12,2), 
+	"DT_PGTO_TAXA" DATE NOT NULL ENABLE, 
+	"VALOR_DESCONTO" NUMBER(12,2), 
+	 CONSTRAINT "TB_TAXA_COND_PAGA_PK" PRIMARY KEY ("COD")
+  USING INDEX  ENABLE, 
+	 CONSTRAINT "TB_TAXA_COND_PAGA_ANO_MES_UK" UNIQUE ("COD_USUARIO", "ANO", "MES")
+  USING INDEX  ENABLE
+   )
+/
+ALTER TABLE  "APEX$_WS_FILES" ADD CONSTRAINT "APEX$_WS_FILES_FK" FOREIGN KEY ("ROW_ID")
+	  REFERENCES  "APEX$_WS_ROWS" ("ID") ON DELETE CASCADE ENABLE
+/
+ALTER TABLE  "APEX$_WS_LINKS" ADD CONSTRAINT "APEX$_WS_LINKS_FK" FOREIGN KEY ("ROW_ID")
+	  REFERENCES  "APEX$_WS_ROWS" ("ID") ON DELETE CASCADE ENABLE
+/
+ALTER TABLE  "APEX$_WS_NOTES" ADD CONSTRAINT "APEX$_WS_NOTES_FK" FOREIGN KEY ("ROW_ID")
+	  REFERENCES  "APEX$_WS_ROWS" ("ID") ON DELETE CASCADE ENABLE
+/
+ALTER TABLE  "APEX$_WS_TAGS" ADD CONSTRAINT "APEX$_WS_TAGS_FK" FOREIGN KEY ("ROW_ID")
+	  REFERENCES  "APEX$_WS_ROWS" ("ID") ON DELETE CASCADE ENABLE
+/
+ALTER TABLE  "TB_CORREIO" ADD CONSTRAINT "TB_CORREIO_CON_ESTCO_FK" FOREIGN KEY ("COD_ESTADO_CORREIO")
+	  REFERENCES  "TB_ESTADO_CORREIO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_CORREIO" ADD CONSTRAINT "TB_CORREIO_CON_ESTNOTI_FK" FOREIGN KEY ("COD_ESTADO_NOTIFICACAO")
+	  REFERENCES  "TB_ESTADO_NOTIFICACAO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_CORREIO" ADD CONSTRAINT "TB_CORREIO_CON_TIPCO_FK" FOREIGN KEY ("COD_TIPO_CORREIO")
+	  REFERENCES  "TB_TIPO_CORREIO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_CORREIO" ADD CONSTRAINT "TB_CORREIO_CON_UNID_FK" FOREIGN KEY ("COD_UNIDADE")
+	  REFERENCES  "TB_UNIDADE" ("COD") ENABLE
+/
+ALTER TABLE  "TB_CORREIO" ADD CONSTRAINT "TB_CORREIO_CON_USRD_FK" FOREIGN KEY ("COD_USUARIO_DESTINATARIO")
+	  REFERENCES  "TB_USUARIO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_LANCAMENTO_CONTABIL" ADD CONSTRAINT "TB_LANCAMENTO_CONTABIL_CON_FK" FOREIGN KEY ("COD_PLANO_CONTAS")
+	  REFERENCES  "TB_PLANO_DE_CONTAS" ("COD") ENABLE
+/
+ALTER TABLE  "TB_PERFIL_USUARIO" ADD CONSTRAINT "TB_PERFIL_USUARIO_CON" FOREIGN KEY ("COD_PERFIL_ACESSO")
+	  REFERENCES  "TB_PERFIL_DE_ACESSO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_PLANO_DE_CONTAS" ADD CONSTRAINT "TB_PLANO_DE_CONTAS_CON" FOREIGN KEY ("COD_PLANO_CONTAS_SUPERIOR")
+	  REFERENCES  "TB_PLANO_DE_CONTAS" ("COD") ENABLE
+/
+ALTER TABLE  "TB_RECEITA_TAXA_COND" ADD CONSTRAINT "TB_RECEITA_TAXA_COND_CON" FOREIGN KEY ("COD_PLANO_CONTAS")
+	  REFERENCES  "TB_PLANO_DE_CONTAS" ("COD") ENABLE
+/
+ALTER TABLE  "TB_RESERVA" ADD CONSTRAINT "TB_RESERVA_CON_FK" FOREIGN KEY ("COD_USUARIO")
+	  REFERENCES  "TB_USUARIO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_RESERVA" ADD CONSTRAINT "TB_RESERVA_CON_FK2" FOREIGN KEY ("COD_ITEM_DE_RESERVA")
+	  REFERENCES  "TB_ITEM_DE_RESERVA" ("COD") ENABLE
+/
+ALTER TABLE  "TB_RESERVA" ADD CONSTRAINT "TB_RESERVA_CON_FK3" FOREIGN KEY ("COD_LANCAMENTO_CONTABIL")
+	  REFERENCES  "TB_LANCAMENTO_CONTABIL" ("COD") ENABLE
+/
+ALTER TABLE  "TB_TAXA_COND_PAGA" ADD CONSTRAINT "TB_TAXA_COND_PAGA_CON" FOREIGN KEY ("COD_USUARIO")
+	  REFERENCES  "TB_USUARIO" ("COD") ENABLE
+/
+ALTER TABLE  "TB_UNIDADE" ADD CONSTRAINT "TB_UNIDADE_CON_USR_FK" FOREIGN KEY ("COD_USUARIO_RESPONSAVEL")
+	  REFERENCES  "TB_USUARIO" ("COD") ENABLE
+/
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_DESCRIPTION_PLANO_CONTAS" (pCodPlanoContas IN NUMBER) RETURN VARCHAR2 
+IS 
+ 
+  vReturn VARCHAR2(1000);
+ 
+BEGIN
+
+  --Retrieves description based on cod. If no data found declares inexistence of the account.
+
+  SELECT nome_da_conta 
+    INTO vReturn 
+	FROM tb_plano_de_contas 
+	WHERE cod = pCodPlanoContas; 
+     
+  RETURN vReturn; 
+	 
+  EXCEPTION WHEN NO_DATA_FOUND THEN 
+   
+    vReturn := 'Conta inexistente'; 
+     
+  RETURN vReturn; 
+       
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_FORMAT_STRING_TO_NUMBER_CPF" (pString in VARCHAR2) RETURN NVARCHAR2 
+IS 
+ 
+  vReturn NVARCHAR2 (100); 
+  vString VARCHAR2 (100);
+  vNumber NUMBER;
+ 
+BEGIN 
+ 
+  --Takes away dots, underscores, parentheses, traces and empty spaces from the given CPF string. 
+ 
+  vString := pString; 
+  vString := REPLACE(vString, '.'); 
+  vString := REPLACE(vString, '-'); 
+  vString := REPLACE(vString, '('); 
+  vString := REPLACE(vString, ')'); 
+  vString := REPLACE(vString, '_'); 
+  vString := REPLACE(vString, ' '); 
+   
+  vReturn := vString; 
+  
+  vNumber := TO_NUMBER(vString);
+   
+  RETURN vReturn;
+  
+  EXCEPTION WHEN OTHERS THEN
+  
+    RETURN NULL;
+    
+END "F_FORMAT_STRING_TO_NUMBER_CPF"; 
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_NUMBERS_ONLY" (pString IN VARCHAR2) RETURN BOOLEAN  
+IS 
+ 
+  vNumber NUMBER; 
+ 
+BEGIN 
+ 
+  --Tries to convert the string into a number. If it fails the exception raised indicates the string is not composed only by numbers.
+  
+  IF(pString IS NULL) THEN
+  
+    RETURN FALSE;
+    
+  END IF;
+ 
+  vNumber := TO_NUMBER(pString); 
+   
+  RETURN TRUE; 
+   
+  EXCEPTION WHEN VALUE_ERROR THEN 
+   
+    RETURN FALSE;
+
+END "F_NUMBERS_ONLY";
+   
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_COD_GRUPO_CONTAS" (pCodPlanoContas IN NUMBER) RETURN NUMBER 
+IS 
+ 
+  vCodPlanoContasSuperior NUMBER; 
+  vCodPlanoContas NUMBER;
+  vExists NUMBER;
+ 
+BEGIN
+
+  --Tries to recover group number from the accont and return null if it fails.
+  
+  SELECT COUNT(*)
+    INTO vExists
+    FROM tb_plano_de_contas
+    WHERE cod = pCodPlanoContas;
+
+  IF(vExists = 0) THEN
+  
+    RETURN NULL;
+    
+  END IF;
+ 
+  BEGIN 
+   
+    SELECT cod_plano_contas_superior,  
+           cod   
+      INTO vCodPlanoContasSuperior,  
+           vCodPlanoContas 
+      FROM tb_plano_de_contas 
+      WHERE cod = pCodPlanoContas; 
+	 
+    EXCEPTION WHEN NO_DATA_FOUND THEN 
+   
+      vCodPlanoContasSuperior := NULL; 
+	 
+  END; 
+   
+  IF (vCodPlanoContasSuperior IS NULL) THEN  
+   
+    RETURN vCodPlanoContas;  
+   
+  ELSE 
+   
+    RETURN F_RETURN_COD_GRUPO_CONTAS(vCodPlanoContasSuperior); 
+   
+  END IF; 
+  
+END; 
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_COD_PLANO_CONTAS" (pCodPlanoContas IN NUMBER) RETURN NUMBER 
+IS 
+ 
+  vCodPlanoContasSuperior NUMBER; 
+  vCodPlanoContas NUMBER; 
+ 
+BEGIN 
+ 
+  --Tries to recover group number from the accont and return null if it fails.
+ 
+  BEGIN 
+   
+    SELECT cod_plano_contas_superior,  
+           cod 
+      INTO vCodPlanoContasSuperior,  
+           vCodPlanoContas 
+      FROM tb_plano_de_contas 
+      WHERE cod = pCodPlanoContas; 
+	 
+  EXCEPTION WHEN NO_DATA_FOUND THEN 
+   
+    vCodPlanoContasSuperior := NULL; 
+	 
+  END; 
+  
+  IF (vCodPlanoContasSuperior IS NULL) THEN  
+   
+    RETURN vCodPlanoContas; 
+    
+  ELSE 
+   
+    RETURN F_RETURN_COD_PLANO_CONTAS(vCodPlanoContasSuperior); 
+    
+  END IF; 
+  
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_COD_SUBGRUPO_CONTAS" (pCodPlanoContas IN NUMBER) RETURN NUMBER
+IS
+
+  vCodPlanoContasSuperior NUMBER;
+  vCodPlanoContas NUMBER;
+
+BEGIN
+
+  BEGIN
+  
+    SELECT cod_plano_contas_superior, 
+           cod 
+      INTO vCodPlanoContasSuperior, 
+           vCodPlanoContas
+      FROM tb_plano_de_contas
+      WHERE cod = pCodPlanoContas;
+	
+    EXCEPTION WHEN NO_DATA_FOUND THEN
+  
+      vCodPlanoContasSuperior := NULL;
+	
+  END;
+  
+  IF (vCodPlanoContasSuperior = F_RETURN_COD_GRUPO_CONTAS(pCodPlanoContas)) THEN 
+  
+    RETURN vCodPlanoContas; 
+  
+  ELSE
+  
+    IF vCodPlanoContasSuperior IS NULL THEN
+    
+      RETURN 0;
+      
+    ELSE
+  
+      RETURN F_RETURN_COD_SUBGRUPO_CONTAS(vCodPlanoContasSuperior);
+      
+    END IF;
+  
+  END IF;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_ENCRYPTED_PASSWORD" (pPassword IN VARCHAR2) RETURN VARCHAR2
+IS
+
+vEncryptedPassword VARCHAR2(64) := NULL;
+
+BEGIN
+
+  --Given a password a database tool uses MD5 algorithm to encrypt the password. 
+
+  vEncryptedPassword := RAWTOHEX(dbms_obfuscation_toolkit.md5(INPUT => utl_raw.cast_to_raw(pPassword)));  
+  
+  RETURN vEncryptedPassword;  
+
+END "F_RETURN_ENCRYPTED_PASSWORD";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_FEE_VALUE" RETURN VARCHAR2
+IS
+
+vReturn NUMBER;
+
+BEGIN
+
+  SELECT valor_taxa
+    INTO vReturn
+    FROM tb_hist_taxa_cond
+    WHERE dt_fim IS NULL;
+
+  RETURN TO_CHAR(vReturn, 'FML999G999G999G999G990D00');
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_IF_GREATER_DAY" (pDateReference DATE, pDate DATE) RETURN BOOLEAN 
+IS
+
+  vReturn BOOLEAN;
+  vValidDate BOOLEAN;
+  vValidReferenceDdate BOOLEAN;
+  
+BEGIN
+
+  vValidDate := F_RETURN_IF_VALID_DATE(pDate);
+  vValidReferenceDdate := F_RETURN_IF_VALID_DATE(pDateReference);
+  
+  IF ((vValidDate = FALSE) OR (vValidReferenceDdate = FALSE)) THEN
+  
+    RETURN FALSE;
+	
+  END IF;
+  
+  IF (TRUNC(pDate) >= TRUNC(pDateReference)) THEN
+  
+    RETURN TRUE;
+	
+  ELSE
+  
+    RETURN FALSE;
+	
+  END IF;
+  
+END "F_RETURN_IF_GREATER_DAY";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_IF_LEAP_YEAR" (pYear IN NUMBER) RETURN BOOLEAN
+IS
+
+  vRest1 NUMBER;
+  vRest2 NUMBER;
+  vRest3 NUMBER;
+
+BEGIN
+
+  vRest1 := MOD(pYear,4);
+  vRest2 := MOD(pYear,100);
+  vRest3 := MOD(pYear,400);
+
+  IF ((vRest1 = 0 AND vRest2 <> 0) OR vRest3 = 0) THEN RETURN TRUE;
+
+  ELSE RETURN FALSE;
+
+  END IF;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_IF_VALID_DATE" (pDate IN DATE) RETURN BOOLEAN
+IS
+
+  vDay NUMBER;
+  vMonth NUMBER;
+  vYear NUMBER;
+
+BEGIN
+
+  --Load variables.
+  SELECT EXTRACT (DAY FROM pDate) INTO vDay FROM DUAL;
+  SELECT EXTRACT (MONTH FROM pDate) INTO vMonth FROM DUAL;
+  SELECT EXTRACT (YEAR FROM pDate) INTO vYear FROM DUAL;
+  
+  IF((vDay <= 0) OR (vDay > 31)) THEN RETURN FALSE;
+  
+  ELSE 
+  
+    IF((vMonth <=0) OR (vMonth > 12)) THEN RETURN FALSE;
+    
+    ELSE
+    
+      IF((vYear <= 1900) OR (vYear > 2067)) THEN RETURN FALSE;
+      
+      ELSE
+      
+        IF((vMonth = 2) AND (vDay > 28) AND (F_RETURN_IF_LEAP_YEAR(vYear) = FALSE)) THEN RETURN FALSE;
+        
+        ELSE 
+        
+          IF(vMonth = 2 AND vDay > 29 AND F_RETURN_IF_LEAP_YEAR(vYear) = TRUE) THEN RETURN FALSE;
+          
+          ELSE
+          
+            RETURN TRUE;
+            
+          END IF;
+          
+        END IF;
+        
+      END IF;
+      
+    END IF;
+    
+  END IF;
+  
+  EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Erro. Data inválida.');
+    
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_NUMERO_DA_CONTA" (pCodPlanoContas IN NUMBER) RETURN VARCHAR2
+IS
+
+  vNumeroDaConta VARCHAR2(100);
+
+BEGIN
+
+  BEGIN
+
+    SELECT numero_da_conta 
+      INTO vNumeroDaConta
+	  FROM tb_plano_de_contas
+	  WHERE cod = pCodPlanoContas;
+	
+    EXCEPTION WHEN NO_DATA_FOUND THEN
+  
+      RETURN NULL;
+	
+  END;
+  
+  RETURN vNumeroDaConta;
+  
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_RANDOM_CPF" RETURN VARCHAR2
+IS
+
+vCpf VARCHAR2(11);
+mTotal NUMBER := 0;
+mDigit NUMBER := 0;
+
+BEGIN
+
+  SELECT TO_CHAR(TRUNC(dbms_random.VALUE(10000000000, 99999999999))) AS CPF
+    INTO vCpf
+    FROM DUAL;
+
+  --Multiplies each digit from 1 to 9 of the given CPF number according to its correspondent weight (10 to 2) and sums the results.
+  
+  FOR i IN 1 .. 9 LOOP
+  
+    mTotal := mTotal + SUBSTR (vCpf, i, 1) * (11 - i);
+ 
+  END LOOP;
+  
+  --Determines the first verification digit. If the digit is greater than 9 it becomes 0 else it stays the same.
+    
+  mDigit := 11 - MOD (mTotal, 11);
+  
+  IF mDigit > 9 THEN
+ 
+    mDigit := 0;
+ 
+  END IF;
+  
+  --Determines the 10th digit.
+ 
+  vCpf := substr(vCpf,1,9) || mDigit || substr(vCpf,11,1);
+ 
+  mDigit := 0;
+  mTotal := 0;
+  
+  --Do the same process to check the second verification digit againt the 11th CPF number.
+ 
+  FOR i IN 1 .. 10 LOOP
+ 
+    mTotal := mTotal + SUBSTR (vCpf, i, 1) * (12 - i);
+ 
+  END LOOP;
+ 
+    mDigit := 11 - MOD (mTotal, 11);
+  
+  IF mDigit > 9 THEN
+ 
+    mDigit := 0;
+ 
+  END IF;
+ 
+  vCpf := substr(vCpf,1,10) || mDigit;
+ 
+  RETURN vCpf;
+  
+END "F_RETURN_RANDOM_CPF";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_RANDOM_PASSWORD" RETURN VARCHAR2
+IS
+
+vPassword VARCHAR2(7);
+
+BEGIN
+
+  SELECT dbms_random.string('X', 5) || TRUNC(dbms_random.VALUE(10, 99)) AS SENHA
+    INTO vPassword
+    FROM DUAL;
+  
+  RETURN vPassword;
+  
+END "F_RETURN_RANDOM_PASSWORD";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_RANDOM_PHONE_NUMBER" RETURN VARCHAR
+IS
+
+vPhoneNumber VARCHAR(10);
+
+BEGIN
+
+  SELECT TO_CHAR(TRUNC(dbms_random.VALUE(1000000, 9999999))) AS PHONE_NUMBER
+    INTO vPhoneNumber
+    FROM DUAL;
+
+  vPhoneNumber := '613' || vPhoneNumber;
+  
+  RETURN vPhoneNumber;
+  
+END "F_RETURN_RANDOM_PHONE_NUMBER";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_RETURN_RANDOM_RG" RETURN NUMBER
+IS
+
+vRg NUMBER;
+
+BEGIN
+
+  SELECT TRUNC(dbms_random.VALUE(1000000, 9999999)) AS RG
+    INTO vRg
+    FROM DUAL;
+  
+  RETURN vRg;
+  
+END "F_RETURN_RANDOM_RG";
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_TOTAL_MONTHLY_PAYMENT" (pReferenceDate IN DATE) RETURN NUMBER
+IS
+
+  vTotalAssessment NUMBER;
+  vTotalInterest NUMBER;
+  vTotaDiscount NUMBER;
+  vTotaMonthlyPayment NUMBER;
+  vTotal NUMBER;
+
+BEGIN
+
+  SELECT SUM(valor_taxa_pago)
+    INTO vTotaMonthlyPayment
+    FROM tb_taxa_cond_paga
+    WHERE TO_CHAR(dt_pgto_taxa, 'mm/yyyy') = TO_CHAR(pReferenceDate, 'mm/yyyy');
+
+  SELECT SUM(valor_juros)
+    INTO vTotalInterest
+    FROM tb_taxa_cond_paga
+    WHERE TO_CHAR(dt_pgto_taxa, 'mm/yyyy') = TO_CHAR(pReferenceDate, 'mm/yyyy');
+
+  SELECT SUM(valor_multa)
+    INTO vTotalAssessment
+    FROM tb_taxa_cond_paga
+    WHERE TO_CHAR(dt_pgto_taxa, 'mm/yyyy') = TO_CHAR(pReferenceDate, 'mm/yyyy');
+	
+  SELECT SUM(valor_desconto)
+    INTO vTotaDiscount
+    FROM tb_taxa_cond_paga
+    WHERE TO_CHAR(dt_pgto_taxa, 'mm/yyyy') = TO_CHAR(pReferenceDate, 'mm/yyyy');
+
+  IF(vTotalInterest IS NULL) THEN
+  
+    vTotalInterest := 0;
+
+  END IF;
+
+ 
+  IF(vTotalAssessment IS NULL) THEN
+  
+    vTotalAssessment := 0;
+
+  END IF;
+
+  
+  IF(vTotaDiscount IS NULL) THEN
+  
+    vTotaDiscount := 0;
+
+  END IF;
+	
+  IF(vTotaMonthlyPayment IS NULL) THEN
+  
+    vTotaMonthlyPayment := 0;
+
+  END IF;
+    
+  vTotal := (vTotaMonthlyPayment + vTotalInterest + vTotalAssessment) - vTotaDiscount;
+
+  RETURN vTotal;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE FUNCTION  "F_VALID_CPF" (pCpf IN VARCHAR2) RETURN BOOLEAN
+IS
+
+mTotal NUMBER := 0;
+mDigit NUMBER := 0;
+vCpfNumber NUMBER := 0;
+
+BEGIN
+
+  vCpfNumber := TO_NUMBER(pCpf);
+
+  --Discard the most usual invalid CPF numbers.
+  
+  IF (pCpf IN ('00000000000',
+               '11111111111',
+               '22222222222',
+               '33333333333',
+               '44444444444',
+               '55555555555',
+               '66666666666',
+               '77777777777',
+               '88888888888',
+               '99999999999')) THEN
+			    
+    RETURN FALSE;
+	
+  END IF;
+  
+  --Multiplies each digit from 1 to 9 of the given CPF number according to its correspondent weight (10 to 2) and sums the results.
+  
+  FOR i IN 1 .. 9 LOOP
+  
+    mTotal := mTotal + SUBSTR (pCpf, i, 1) * (11 - i);
+ 
+  END LOOP;
+  
+  --Determines the first verification digit. If the digit is greater than 9 it becomes 0 else it stays the same.
+    
+  mDigit := 11 - MOD (mTotal, 11);
+  
+  IF mDigit > 9 THEN
+ 
+    mDigit := 0;
+ 
+  END IF;
+  
+  --Verifies if the first verification digit corresponds to the 10th digit of the CPF number.
+ 
+  IF mDigit != SUBSTR (pCpf, 10, 1) THEN
+ 
+    RETURN FALSE;
+ 
+  END IF;
+ 
+  mDigit := 0;
+  mTotal := 0;
+  
+  --Do the same process to check the second verification digit againt the 11th CPF number.
+ 
+  FOR i IN 1 .. 10 LOOP
+ 
+    mTotal := mTotal + SUBSTR (pCpf, i, 1) * (12 - i);
+ 
+  END LOOP;
+ 
+    mDigit := 11 - MOD (mTotal, 11);
+  
+  IF mDigit > 9 THEN
+ 
+    mDigit := 0;
+ 
+  END IF;
+ 
+  IF mDigit != SUBSTR (pCpf, 11, 1) THEN
+ 
+    RETURN FALSE;
+ 
+  END IF;
+ 
+  RETURN TRUE;
+  
+  EXCEPTION WHEN OTHERS THEN
+  
+    RETURN FALSE;
+
+END "F_VALID_CPF";
+/
+
+CREATE INDEX  "APEX$_ACL_IDX1" ON  "APEX$_ACL" ("WS_APP_ID")
+/
+CREATE INDEX  "APEX$_WS_FILES_IDX1" ON  "APEX$_WS_FILES" ("WS_APP_ID", "DATA_GRID_ID", "ROW_ID")
+/
+CREATE INDEX  "APEX$_WS_FILES_IDX2" ON  "APEX$_WS_FILES" ("WS_APP_ID", "WEBPAGE_ID")
+/
+CREATE INDEX  "APEX$_WS_HISTORY_IDX" ON  "APEX$_WS_HISTORY" ("WS_APP_ID", "DATA_GRID_ID", "ROW_ID")
+/
+CREATE INDEX  "APEX$_WS_LINKS_IDX1" ON  "APEX$_WS_LINKS" ("WS_APP_ID", "DATA_GRID_ID", "ROW_ID")
+/
+CREATE INDEX  "APEX$_WS_LINKS_IDX2" ON  "APEX$_WS_LINKS" ("WS_APP_ID", "WEBPAGE_ID")
+/
+CREATE INDEX  "APEX$_WS_NOTES_IDX1" ON  "APEX$_WS_NOTES" ("WS_APP_ID", "DATA_GRID_ID", "ROW_ID")
+/
+CREATE INDEX  "APEX$_WS_NOTES_IDX2" ON  "APEX$_WS_NOTES" ("WS_APP_ID", "WEBPAGE_ID")
+/
+CREATE INDEX  "APEX$_WS_ROWS_IDX" ON  "APEX$_WS_ROWS" ("WS_APP_ID", "DATA_GRID_ID")
+/
+CREATE INDEX  "APEX$_WS_TAGS_IDX1" ON  "APEX$_WS_TAGS" ("WS_APP_ID", "DATA_GRID_ID", "ROW_ID")
+/
+CREATE INDEX  "APEX$_WS_TAGS_IDX2" ON  "APEX$_WS_TAGS" ("WS_APP_ID", "WEBPAGE_ID")
+/
+CREATE INDEX  "APEX$_WS_WEBPG_SECHIST_IDX1" ON  "APEX$_WS_WEBPG_SECTION_HISTORY" ("WS_APP_ID", "WEBPAGE_ID", "SECTION_ID")
+/
+CREATE OR REPLACE EDITIONABLE PACKAGE  "PKG_AUTHENTICATION" AS
+
+  --Declaration of user's authentication function.
+
+  function "F_AUTHORIZES_USER" (p_username VARCHAR2,
+                                p_password VARCHAR2) RETURN BOOLEAN;
+ 
+END;
+/
+CREATE OR REPLACE EDITIONABLE PACKAGE BODY  "PKG_AUTHENTICATION" AS
+
+  --Definition of user's authentication function.
+
+  function "F_AUTHORIZES_USER" (p_username IN VARCHAR2, p_password IN VARCHAR2) RETURN BOOLEAN
+  IS
+
+  vRecords number;
+  vPasswordOnBd varchar2(4000);
+  vPasswordEncrypted varchar2(4000);
+
+  BEGIN
+  
+    --Verifies if the user exists on database.
+
+    SELECT COUNT(*) 
+      INTO vRecords 
+      FROM tb_perfil_usuario 
+      WHERE cpf = UPPER(p_username);
+
+    IF vRecords > 0 THEN
+    
+      --Retrieves user's password from database.
+
+      SELECT senha 
+        INTO vPasswordOnBd 
+        FROM tb_perfil_usuario 
+        WHERE cpf = UPPER(p_username)
+          AND inativado = 'N';
+          
+      --Encrypts the password inserted by the user.
+
+      vPasswordEncrypted := F_RETURN_ENCRYPTED_PASSWORD(p_password);
+      
+      --Compares the passed encrypted password and the one on the database.
+
+      IF vPasswordEncrypted = vPasswordOnBd THEN
+
+        RETURN true;
+
+      ELSE
+
+        RETURN false;
+
+      END IF;
+
+    ELSE
+
+      RETURN false;
+
+    END IF;
+
+  END "F_AUTHORIZES_USER";
+
+END "PKG_AUTHENTICATION";
+/
+
+CREATE OR REPLACE EDITIONABLE PROCEDURE  "PROC_EMAIL_MAIL_NOTIFICATION" (pCodCorreio IN NUMBER)
+IS
+
+--Notifies user of mail event.
+    
+CURSOR cur_email IS
+ 
+  SELECT u.e_mail_01 AS "EMAIL", 
+         u.nome AS "NOME",
+		 e.estado_correio AS "STATUS",
+		 t.tipo_correio AS "TIPO" 
+    FROM tb_usuario u
+	  JOIN tb_correio c ON c.cod_usuario_destinatario = u.cod
+	  JOIN tb_estado_correio e ON e.cod = c.cod_estado_correio
+	  JOIN tb_tipo_correio t ON t.cod = c.cod_tipo_correio
+    WHERE c.cod = pCodCorreio
+	  AND u.cod = c.cod_usuario_destinatario;
+    
+
+BEGIN
+    
+  FOR cur IN cur_email LOOP
+
+    BEGIN
+  
+      APEX_MAIL.SEND(p_to => cur.email,
+                     p_from => 'md.engsgroup@gmail.com',
+                     p_body => 'NOTIFICAÇÃO',
+                     p_subj => '[SISCOND] - Notificação de correspondência',
+                     p_body_html => '<html>
+                         <body>
+                         <br>
+                             <b>Prezado(a) '||cur.nome||'</b>,
+                         <p> 
+                            Informamos que uma correspondência do tipo <b>'||cur.tipo||'</b> foi cadastrada no sistema 
+							do <b>Condomínio Pitanguinhas</b> com o status <b>'||cur.status||'</b>.						
+                         </p>
+                         <p>
+                            Clique <b><a href="https://apex.oracle.com/pls/apex/f?p=SISCOND">aqui</a></b> para acessar o sistema e conferir.
+                        </p>
+                        <br>
+                        <br>
+                         
+Atenciosamente, 
+<br>
+<br>
+<table>
+    <tr>
+        <td align="center"><img src="https://apex.oracle.com/pls/apex/wwv_flow_file_mgr.get_file?p_security_group_id=7524267777411573927&p_flow_id=121154&p_fname=Logo2.png">
+
+        </td>
+            <td align="center">
+       
+                Administração do Condomínio Pitanguinhas <br>Fone: 61 99555-5555
+            
+            </td>
+    </tr>
+    </table>');
+
+      COMMIT;
+    
+    END;
+
+  END LOOP;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE PROCEDURE  "PROC_EMAIL_USER_PASSWORD" (pCodUsuario IN NUMBER, pPassword IN VARCHAR2, pCodPerfil NUMBER)
+IS
+
+--Notifies user of registration and sends an e-mail with a password.
+
+  vEmail VARCHAR2(200);
+  vNome VARCHAR2(200);
+
+BEGIN
+
+  IF(pCodPerfil != 3)THEN
+ 
+    SELECT e_mail_01 AS "EMAIL", 
+           nome AS "NOME"
+      INTO vEmail,
+           vNome
+      FROM tb_usuario 
+      WHERE cod = pCodUsuario;
+  
+  ELSE
+  
+    SELECT e_mail_01 AS "EMAIL", 
+           nome_funcionario AS "NOME"
+      INTO vEmail,
+           vNome
+      FROM tb_funcionario
+      WHERE cod = pCodUsuario;
+  
+  END IF;
+
+
+    BEGIN
+  
+      APEX_MAIL.SEND(p_to => vEmail,
+                     p_from => 'md.engsgroup@gmail.com',
+                     p_body => 'NOTIFICAÇÃO',
+                     p_subj => '[SISCOND] - Senha de usuário',
+                     p_body_html => '<html>
+                         <body>
+                         <br>
+                             <b>Prezado(a) '||vNome||'</b>,
+                         <p> 
+                            Informamos que o(a) senhor(a) está cadastrado(a) no sistema do <b>Condomínio Pitanguinhas</b> e 
+			    uma senha foi gerada para o seu acesso. 
+	                <br>A seguir se encontram as informações para que realize o seu acesso. Lembramos que o seu CPF
+                            é o login.							
+                         </p>
+                         <p>
+                            SENHA: '||pPassword||'<br>
+		                    Clique <b><a href="https://apex.oracle.com/pls/apex/f?p=SISCOND">aqui</a></b> para acessar o sistema.
+                        </p>
+                        <br>
+                        <br>
+                         
+Atenciosamente, 
+<br>
+<br>
+<table>
+    <tr>
+        <td align="center"><img src="https://apex.oracle.com/pls/apex/wwv_flow_file_mgr.get_file?p_security_group_id=7524267777411573927&p_flow_id=121154&p_fname=Logo2.png">
+
+        </td>
+            <td align="center">
+       
+                Administração do Condomínio Pitanguinhas <br>Fone: 61 99555-5555
+            
+            </td>
+    </tr>
+    </table>');
+
+      COMMIT;
+    
+    END;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE PROCEDURE  "PROC_RED_USER_PASSWORD" (pCodUsuario IN NUMBER, pPassword IN VARCHAR2, pCodPerfil NUMBER)
+IS
+
+--Sends an e-mail with a new password.
+    
+  vEmail VARCHAR2(200);
+  vNome VARCHAR2(200);
+
+BEGIN
+
+  IF(pCodPerfil != 3)THEN
+ 
+    SELECT e_mail_01 AS "EMAIL", 
+           nome AS "NOME"
+      INTO vEmail,
+           vNome
+      FROM tb_usuario 
+      WHERE cod = pCodUsuario;
+  
+  ELSE
+  
+    SELECT e_mail_01 AS "EMAIL", 
+           nome_funcionario AS "NOME"
+      INTO vEmail,
+           vNome
+      FROM tb_funcionario
+      WHERE cod = pCodUsuario;
+  
+  END IF;
+
+    BEGIN
+  
+      APEX_MAIL.SEND(p_to => vEmail,
+                     p_from => 'md.engsgroup@gmail.com',
+                     p_body => 'NOTIFICAÇÃO',
+                     p_subj => '[SISCOND] - Senha de usuário',
+                     p_body_html => '<html>
+                         <body>
+                         <br>
+                             <b>Prezado(a) '||vNome||'</b>,
+                         <p> 
+                            Informamos que o(a) senhor(a) teve sua senha redefinida no sistema do <b>Condomínio Pitanguinhas</b> e 
+			    uma nova senha foi gerada para o seu acesso. 
+	                <br>A seguir se encontram as informações para que realize o seu acesso. Lembramos que o seu CPF
+                            é o login.							
+                         </p>
+                         <p>
+                            SENHA: '||pPassword||'<br>
+		                    Clique <b><a href="https://apex.oracle.com/pls/apex/f?p=SISCOND">aqui</a></b> para acessar o sistema.
+                        </p>
+                        <br>
+                        <br>
+                         
+Atenciosamente, 
+<br>
+<br>
+<table>
+    <tr>
+        <td align="center"><img src="https://apex.oracle.com/pls/apex/wwv_flow_file_mgr.get_file?p_security_group_id=7524267777411573927&p_flow_id=121154&p_fname=Logo2.png">
+
+        </td>
+            <td align="center">
+       
+                Administração do Condomínio Pitanguinhas <br>Fone: 61 99555-5555
+            
+            </td>
+    </tr>
+    </table>');
+
+      COMMIT;
+    
+    END;
+
+END;
+/
+
+CREATE OR REPLACE EDITIONABLE PROCEDURE  "PROC_TOTAL_FEE_VALUE" (pMes NUMBER)
+IS
+
+  vTotal NUMBER;
+  vCodConta NUMBER;
+  vCodLancamento NUMBER;
+  vMes VARCHAR2(2);
+
+BEGIN
+
+  IF(pMes < 10) THEN
+  
+    vMes := '0' || pMes;
+    
+  ELSE
+  
+    vMes := pMes;
+    
+  END IF;
+
+  SELECT SUM(valor_taxa_pago) AS TOTAL_MENSAL
+    INTO vTotal 
+    FROM tb_taxa_cond_paga
+    WHERE mes = pMes;
+
+  SELECT cod
+   INTO vCodConta
+   FROM tb_plano_de_contas
+   WHERE UPPER(nome_da_conta) = 'TAXAS ORDINÁRIAS';
+
+  BEGIN
+
+    SELECT cod
+      INTO vCodLancamento
+      FROM tb_lancamento_contabil
+      WHERE cod_plano_contas = vCodConta
+        AND TO_NUMBER(TO_CHAR(dt_vencimento, 'mm')) = pMes;
+
+    EXCEPTION WHEN NO_DATA_FOUND THEN
+
+      vCodLancamento := NULL;
+
+  END;
+
+  IF(vCodLancamento IS NULL) THEN
+
+    INSERT INTO tb_lancamento_contabil (dt_vencimento,
+                                        nome_do_lancamento,
+                                        valor_monetario,
+                                        dt_registro_contabil,
+                                        cod_plano_contas,
+                                        login_atualizacao,
+                                        dt_atualizacao,
+                                        descr_lancamento_contabil)
+      VALUES(TO_DATE('05/'||vMes||TO_CHAR(sysdate, 'yyyy'), 'dd/mm/yyyy'),
+             'Taxas de condomínio pagas',
+             vTotal,  
+             TO_DATE('05/'||vMes||TO_CHAR(sysdate, 'yyyy'), 'dd/mm/yyyy'),
+             vCodConta,
+             'SYSTEM',
+             TO_CHAR((SYSTIMESTAMP AT TIME ZONE '-3:00'), 'DD/MON/YYYY HH:MI:SS'),
+             'Somatório total das taxas de condomínio pagas até ' || TO_CHAR(SYSDATE, 'DD/MON/YYYY'));
+             
+  ELSE
+  
+    UPDATE tb_lancamento_contabil
+      SET valor_monetario = vTotal,
+          dt_atualizacao = TO_CHAR((SYSTIMESTAMP AT TIME ZONE '-3:00'), 'DD/MON/YYYY HH:MI:SS'),
+          dt_vencimento = SYSDATE
+      WHERE cod = vCodLancamento;
+             
+  END IF;
+
+END;
+/
+
+ CREATE SEQUENCE   "APEX$_WS_SEQ"  MINVALUE 100 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 100 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "DEPT_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 50 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "EMP_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 8000 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_BLOCO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_CORREIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 321 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_ESTADO_CORREIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_ESTADO_NOTIFICACAO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_FUNCIONARIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_HIST_TAXA_COND_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_ITEM_DE_RESERVA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 141 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_LANCAMENTO_CONTABIL_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 641 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_MURAL_AVISO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 201 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_NOME_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 40 NOCACHE  NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_PERFIL_DE_ACESSO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 4 NOCACHE  NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_PERFIL_USUARIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 38 NOCACHE  NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_PLANO_DE_CONTAS_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 261 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_RECEITA_TAXA_COND_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 201 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_RESERVA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 741 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_TAXA_COND_PAGA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 981 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_TIPO_CORREIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+ CREATE SEQUENCE   "TB_USUARIO_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 881 CACHE 20 NOORDER  NOCYCLE  NOPARTITION
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$TEAM_DEV_FILES_BIU" 
+          before insert or update on apex$team_dev_files
+          for each row
+        declare
+           l_filesize_quota number := 15728640;
+           l_filesize_mb    number;
+        begin
+          for c1 in
+          (
+              select
+                  team_dev_fs_limit
+              from
+                  apex_workspaces
+              where
+                  workspace_id = v( 'APP_SECURITY_GROUP_ID' )
+          )
+          loop
+            l_filesize_quota := c1.team_dev_fs_limit;
+            l_filesize_mb    := l_filesize_quota/1048576;
+          end loop;
+          if :new."ID" is null then
+            select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+          end if;
+          if inserting then
+           :new.created := localtimestamp;
+           :new.created_by := nvl(wwv_flow.g_user,user);
+           :new.updated := localtimestamp;
+           :new.updated_by := nvl(wwv_flow.g_user,user);
+           :new.row_version_number := 1;
+         elsif updating then
+           :new.row_version_number := nvl(:old.row_version_number,1) + 1;
+         end if;
+         if (inserting or updating) and nvl(sys.dbms_lob.getlength(:new.file_blob),0) > l_filesize_quota then
+           raise_application_error(-20000, wwv_flow_lang.system_message('FILE_TOO_LARGE', trunc(l_filesize_mb)));
+         end if;
+         if inserting or updating then
+           :new.updated := localtimestamp;
+           :new.updated_by := nvl(wwv_flow.g_user,user);
+         end if;
+        end;
+        
+/
+ALTER TRIGGER  "APEX$TEAM_DEV_FILES_BIU" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_ACL_T1" 
+before insert or update on "APEX$_ACL"
+for each row
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    :new.username := upper(:new.username);
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_ACL_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_FILES_T1" 
+before insert or update on "APEX$_WS_FILES"
+for each row
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if inserting and :new.image_alias is null then
+        :new.image_alias := :new.name;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        :new.content_last_update := sysdate;
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        if nvl(length(:new.content),0) <> nvl(length(:old.content),0) then
+            :new.content_last_update := sysdate;
+        end if;
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_WS_FILES_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_LINKS_T1" 
+before insert or update on "APEX$_WS_LINKS"
+for each row
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_WS_LINKS_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_NOTES_T1" 
+before insert or update on "APEX$_WS_NOTES"
+for each row
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_WS_NOTES_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_ROWS_T1" 
+before insert or update on "APEX$_WS_ROWS"
+for each row
+declare
+    l_tag_list apex_application_global.vc_arr2;
+    type col_arr is table of varchar2(32767) index by varchar2(255);
+    la_col_label col_arr;
+    procedure datagrid_logging( 
+        p_row_id       in number,
+        p_ws_app_id    in number,
+        p_data_grid_id in number,
+        p_col_name     in varchar2,
+        p_type         in varchar2,
+        p_old_c        in varchar2 default null,
+        p_new_c        in varchar2 default null,
+        p_old_d        in date default null,
+        p_new_d        in date default null,
+        p_old_n        in number default null,
+        p_new_n        in number default null)
+    is
+    begin
+        case p_type
+        when 'C' then
+          if (p_old_c is null and p_new_c is not null) or (p_old_c is not null and p_new_c is null) or (p_old_c != p_new_c) then
+              insert into apex$_ws_history (row_id, ws_app_id, data_grid_id, column_name, old_value, new_value, change_date, application_user_id)
+              values (p_row_id, p_ws_app_id, p_data_grid_id, p_col_name, p_old_c, p_new_c, sysdate, nvl(v('APP_USER'),user));
+          end if;
+        when 'D' then
+          if (p_old_d is null and p_new_d is not null) or (p_old_d is not null and p_new_d is null) or (p_old_d != p_new_d) then
+              insert into apex$_ws_history (row_id, ws_app_id, data_grid_id, column_name, old_value,  new_value, change_date, application_user_id)
+              values (p_row_id, p_ws_app_id, p_data_grid_id, p_col_name, p_old_d, p_new_d, sysdate, nvl(v('APP_USER'),user));
+        	  end if;
+        when 'N' then
+          if (p_old_n is null and p_new_n is not null) or (p_old_n is not null and p_new_n is null) or (p_old_n != p_new_n) then
+              insert into apex$_ws_history (row_id, ws_app_id, data_grid_id, column_name, old_value,  new_value, change_date, application_user_id)
+              values (p_row_id, p_ws_app_id, p_data_grid_id, p_col_name, p_old_n, p_new_n, sysdate, nvl(v('APP_USER'),user));
+          end if;
+        end case;
+    end datagrid_logging;
+    procedure wa( p_c in out nocopy clob, p_buf in varchar2 )
+    is
+    l_lf varchar2(2) := unistr('\000a');
+    begin
+    if p_buf is not null then sys.dbms_lob.writeappend( p_c, length(p_buf||l_lf), upper(p_buf)||l_lf); end if;
+    end wa;
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting then
+        if :new.id is null then
+            select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+        end if;
+        
+        -- manintain readable row key
+        if :new.unique_value is null then
+            :new.unique_value := apex_util.compress_int(apex$_ws_seq.nextval);
+        end if;
+        
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.load_order from sys.dual;
+        :new.change_count := 0;
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        :new.change_count := :old.change_count + 1;
+    end if;
+    --
+    -- inserting remove chr 13
+    --
+    if instr(:new.c001,chr(13)) > 0 then :new.c001 := replace(:new.c001,chr(13),null); end if;
+    if instr(:new.c002,chr(13)) > 0 then :new.c002 := replace(:new.c002,chr(13),null); end if;
+    if instr(:new.c003,chr(13)) > 0 then :new.c003 := replace(:new.c003,chr(13),null); end if;
+    if instr(:new.c004,chr(13)) > 0 then :new.c004 := replace(:new.c004,chr(13),null); end if;
+    if instr(:new.c005,chr(13)) > 0 then :new.c005 := replace(:new.c005,chr(13),null); end if;
+    if instr(:new.c006,chr(13)) > 0 then :new.c006 := replace(:new.c006,chr(13),null); end if;
+    if instr(:new.c007,chr(13)) > 0 then :new.c007 := replace(:new.c007,chr(13),null); end if;
+    if instr(:new.c008,chr(13)) > 0 then :new.c008 := replace(:new.c008,chr(13),null); end if;
+    if instr(:new.c009,chr(13)) > 0 then :new.c009 := replace(:new.c009,chr(13),null); end if;
+    if instr(:new.c010,chr(13)) > 0 then :new.c010 := replace(:new.c010,chr(13),null); end if;
+    if instr(:new.c011,chr(13)) > 0 then :new.c011 := replace(:new.c011,chr(13),null); end if;
+    if instr(:new.c012,chr(13)) > 0 then :new.c012 := replace(:new.c012,chr(13),null); end if;
+    if instr(:new.c013,chr(13)) > 0 then :new.c013 := replace(:new.c013,chr(13),null); end if;
+    if instr(:new.c014,chr(13)) > 0 then :new.c014 := replace(:new.c014,chr(13),null); end if;
+    if instr(:new.c015,chr(13)) > 0 then :new.c015 := replace(:new.c015,chr(13),null); end if;
+    if instr(:new.c016,chr(13)) > 0 then :new.c016 := replace(:new.c016,chr(13),null); end if;
+    if instr(:new.c017,chr(13)) > 0 then :new.c017 := replace(:new.c017,chr(13),null); end if;
+    if instr(:new.c018,chr(13)) > 0 then :new.c018 := replace(:new.c018,chr(13),null); end if;
+    if instr(:new.c019,chr(13)) > 0 then :new.c019 := replace(:new.c019,chr(13),null); end if;
+    if instr(:new.c020,chr(13)) > 0 then :new.c020 := replace(:new.c010,chr(23),null); end if;
+    if instr(:new.c021,chr(13)) > 0 then :new.c021 := replace(:new.c001,chr(23),null); end if;
+    if instr(:new.c022,chr(13)) > 0 then :new.c022 := replace(:new.c002,chr(23),null); end if;
+    if instr(:new.c023,chr(13)) > 0 then :new.c023 := replace(:new.c003,chr(23),null); end if;
+    if instr(:new.c024,chr(13)) > 0 then :new.c024 := replace(:new.c004,chr(23),null); end if;
+    if instr(:new.c025,chr(13)) > 0 then :new.c025 := replace(:new.c005,chr(23),null); end if;
+    if instr(:new.c026,chr(13)) > 0 then :new.c026 := replace(:new.c006,chr(23),null); end if;
+    if instr(:new.c027,chr(13)) > 0 then :new.c027 := replace(:new.c007,chr(23),null); end if;
+    if instr(:new.c028,chr(13)) > 0 then :new.c028 := replace(:new.c008,chr(23),null); end if;
+    if instr(:new.c029,chr(13)) > 0 then :new.c029 := replace(:new.c009,chr(23),null); end if;
+    if instr(:new.c030,chr(13)) > 0 then :new.c030 := replace(:new.c030,chr(13),null); end if;
+    if instr(:new.c031,chr(13)) > 0 then :new.c031 := replace(:new.c031,chr(13),null); end if;
+    if instr(:new.c032,chr(13)) > 0 then :new.c032 := replace(:new.c032,chr(13),null); end if;
+    if instr(:new.c033,chr(13)) > 0 then :new.c033 := replace(:new.c033,chr(13),null); end if;
+    if instr(:new.c034,chr(13)) > 0 then :new.c034 := replace(:new.c034,chr(13),null); end if;
+    if instr(:new.c035,chr(13)) > 0 then :new.c035 := replace(:new.c035,chr(13),null); end if;
+    if instr(:new.c036,chr(13)) > 0 then :new.c036 := replace(:new.c036,chr(13),null); end if;
+    if instr(:new.c037,chr(13)) > 0 then :new.c037 := replace(:new.c037,chr(13),null); end if;
+    if instr(:new.c038,chr(13)) > 0 then :new.c038 := replace(:new.c038,chr(13),null); end if;
+    if instr(:new.c039,chr(13)) > 0 then :new.c039 := replace(:new.c039,chr(13),null); end if;
+    if instr(:new.c040,chr(13)) > 0 then :new.c040 := replace(:new.c040,chr(13),null); end if;
+    if instr(:new.c041,chr(13)) > 0 then :new.c041 := replace(:new.c041,chr(13),null); end if;
+    if instr(:new.c042,chr(13)) > 0 then :new.c042 := replace(:new.c042,chr(13),null); end if;
+    if instr(:new.c043,chr(13)) > 0 then :new.c043 := replace(:new.c043,chr(13),null); end if;
+    if instr(:new.c044,chr(13)) > 0 then :new.c044 := replace(:new.c044,chr(13),null); end if;
+    if instr(:new.c045,chr(13)) > 0 then :new.c045 := replace(:new.c045,chr(13),null); end if;
+    if instr(:new.c046,chr(13)) > 0 then :new.c046 := replace(:new.c046,chr(13),null); end if;
+    if instr(:new.c047,chr(13)) > 0 then :new.c047 := replace(:new.c047,chr(13),null); end if;
+    if instr(:new.c048,chr(13)) > 0 then :new.c048 := replace(:new.c048,chr(13),null); end if;
+    if instr(:new.c049,chr(13)) > 0 then :new.c049 := replace(:new.c049,chr(13),null); end if;
+    if instr(:new.c050,chr(13)) > 0 then :new.c050 := replace(:new.c050,chr(13),null); end if;
+    if :new.search_clob is null then
+        sys.dbms_lob.createtemporary( :new.search_clob, false, sys.dbms_lob.session );
+    else
+        sys.dbms_lob.trim( :new.search_clob, 0 );
+    end if;
+    wa(:new.search_clob,:new.c001);wa(:new.search_clob,:new.c002);wa(:new.search_clob,:new.c003);
+    wa(:new.search_clob,:new.c004);wa(:new.search_clob,:new.c005);wa(:new.search_clob,:new.c006);
+    wa(:new.search_clob,:new.c007);wa(:new.search_clob,:new.c008);wa(:new.search_clob,:new.c009);
+    wa(:new.search_clob,:new.c010);wa(:new.search_clob,:new.c011);wa(:new.search_clob,:new.c012);
+    wa(:new.search_clob,:new.c013);wa(:new.search_clob,:new.c014);wa(:new.search_clob,:new.c015);
+    wa(:new.search_clob,:new.c016);wa(:new.search_clob,:new.c017);wa(:new.search_clob,:new.c018);
+    wa(:new.search_clob,:new.c019);wa(:new.search_clob,:new.c020);wa(:new.search_clob,:new.c021);
+    wa(:new.search_clob,:new.c022);wa(:new.search_clob,:new.c023);wa(:new.search_clob,:new.c024);
+    wa(:new.search_clob,:new.c025);wa(:new.search_clob,:new.c026);wa(:new.search_clob,:new.c027);
+    wa(:new.search_clob,:new.c028);wa(:new.search_clob,:new.c029);wa(:new.search_clob,:new.c030);
+    wa(:new.search_clob,:new.c031);wa(:new.search_clob,:new.c032);wa(:new.search_clob,:new.c033);
+    wa(:new.search_clob,:new.c034);wa(:new.search_clob,:new.c035);wa(:new.search_clob,:new.c036);
+    wa(:new.search_clob,:new.c037);wa(:new.search_clob,:new.c038);wa(:new.search_clob,:new.c039);
+    wa(:new.search_clob,:new.c040);wa(:new.search_clob,:new.c041);wa(:new.search_clob,:new.c042);
+    wa(:new.search_clob,:new.c043);wa(:new.search_clob,:new.c044);wa(:new.search_clob,:new.c045);
+    wa(:new.search_clob,:new.c046);wa(:new.search_clob,:new.c047);wa(:new.search_clob,:new.c048);
+    wa(:new.search_clob,:new.c049);wa(:new.search_clob,:new.c050);
+    --
+    -- history
+    --
+    if updating then
+       -- initialize column label array
+       for i in 1..50
+       loop
+           la_col_label('C'||to_char(i,'FM009')) := null;
+           la_col_label('N'||to_char(i,'FM009')) := null;
+           la_col_label('D'||to_char(i,'FM009')) := null;
+       end loop;
+       -- get column label array
+       for c1 in (select column_alias, report_label 
+                  from apex_ws_data_grid_col
+                  where data_grid_id = :new.data_grid_id)
+       loop
+           la_col_label(c1.column_alias) := c1.report_label;
+       end loop;
+       -- strings
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C001'),'C',:old.c001,:new.c001);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C002'),'C',:old.c002,:new.c002);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C003'),'C',:old.c003,:new.c003);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C004'),'C',:old.c004,:new.c004);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C005'),'C',:old.c005,:new.c005);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C006'),'C',:old.c006,:new.c006);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C007'),'C',:old.c007,:new.c007);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C008'),'C',:old.c008,:new.c008);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C009'),'C',:old.c009,:new.c009);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C010'),'C',:old.c010,:new.c010);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C011'),'C',:old.c011,:new.c011);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C012'),'C',:old.c012,:new.c012);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C013'),'C',:old.c013,:new.c013);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C014'),'C',:old.c014,:new.c014);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C015'),'C',:old.c015,:new.c015);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C016'),'C',:old.c016,:new.c016);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C017'),'C',:old.c017,:new.c017);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C018'),'C',:old.c018,:new.c018);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C019'),'C',:old.c019,:new.c019);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C020'),'C',:old.c020,:new.c020);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C021'),'C',:old.c021,:new.c021);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C022'),'C',:old.c022,:new.c022);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C023'),'C',:old.c023,:new.c023);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C024'),'C',:old.c024,:new.c024);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C025'),'C',:old.c025,:new.c025);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C026'),'C',:old.c026,:new.c026);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C027'),'C',:old.c027,:new.c027);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C028'),'C',:old.c028,:new.c028);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C029'),'C',:old.c029,:new.c029);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C030'),'C',:old.c030,:new.c030);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C031'),'C',:old.c031,:new.c031);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C032'),'C',:old.c032,:new.c032);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C033'),'C',:old.c033,:new.c033);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C034'),'C',:old.c034,:new.c034);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C035'),'C',:old.c035,:new.c035);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C036'),'C',:old.c036,:new.c036);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C037'),'C',:old.c037,:new.c037);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C038'),'C',:old.c038,:new.c038);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C039'),'C',:old.c039,:new.c039);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C040'),'C',:old.c040,:new.c040);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C041'),'C',:old.c041,:new.c041);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C042'),'C',:old.c042,:new.c042);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C043'),'C',:old.c043,:new.c043);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C044'),'C',:old.c044,:new.c044);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C045'),'C',:old.c045,:new.c045);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C046'),'C',:old.c046,:new.c046);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C047'),'C',:old.c047,:new.c047);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C048'),'C',:old.c048,:new.c048);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C049'),'C',:old.c049,:new.c049);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('C050'),'C',:old.c050,:new.c050);
+       -- numbers
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N001'),'N',null,null,null,null,:old.n001,:new.n001);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N002'),'N',null,null,null,null,:old.n002,:new.n002);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N003'),'N',null,null,null,null,:old.n003,:new.n003);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N004'),'N',null,null,null,null,:old.n004,:new.n004);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N005'),'N',null,null,null,null,:old.n005,:new.n005);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N006'),'N',null,null,null,null,:old.n006,:new.n006);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N007'),'N',null,null,null,null,:old.n007,:new.n007);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N008'),'N',null,null,null,null,:old.n008,:new.n008);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N009'),'N',null,null,null,null,:old.n009,:new.n009);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N010'),'N',null,null,null,null,:old.n010,:new.n010);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N011'),'N',null,null,null,null,:old.n011,:new.n011);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N012'),'N',null,null,null,null,:old.n012,:new.n012);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N013'),'N',null,null,null,null,:old.n013,:new.n013);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N014'),'N',null,null,null,null,:old.n014,:new.n014);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N015'),'N',null,null,null,null,:old.n015,:new.n015);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N016'),'N',null,null,null,null,:old.n016,:new.n016);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N017'),'N',null,null,null,null,:old.n017,:new.n017);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N018'),'N',null,null,null,null,:old.n018,:new.n018);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N019'),'N',null,null,null,null,:old.n019,:new.n019);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N020'),'N',null,null,null,null,:old.n020,:new.n020);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N021'),'N',null,null,null,null,:old.n021,:new.n021);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N022'),'N',null,null,null,null,:old.n022,:new.n022);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N023'),'N',null,null,null,null,:old.n023,:new.n023);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N024'),'N',null,null,null,null,:old.n024,:new.n024);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N025'),'N',null,null,null,null,:old.n025,:new.n025);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N026'),'N',null,null,null,null,:old.n026,:new.n026);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N027'),'N',null,null,null,null,:old.n027,:new.n027);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N028'),'N',null,null,null,null,:old.n028,:new.n028);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N029'),'N',null,null,null,null,:old.n029,:new.n029);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N030'),'N',null,null,null,null,:old.n030,:new.n030);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N031'),'N',null,null,null,null,:old.n031,:new.n031);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N032'),'N',null,null,null,null,:old.n032,:new.n032);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N033'),'N',null,null,null,null,:old.n033,:new.n033);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N034'),'N',null,null,null,null,:old.n034,:new.n034);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N035'),'N',null,null,null,null,:old.n035,:new.n035);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N036'),'N',null,null,null,null,:old.n036,:new.n036);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N037'),'N',null,null,null,null,:old.n037,:new.n037);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N038'),'N',null,null,null,null,:old.n038,:new.n038);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N039'),'N',null,null,null,null,:old.n039,:new.n039);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N040'),'N',null,null,null,null,:old.n040,:new.n040);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N041'),'N',null,null,null,null,:old.n041,:new.n041);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N042'),'N',null,null,null,null,:old.n042,:new.n042);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N043'),'N',null,null,null,null,:old.n043,:new.n043);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N044'),'N',null,null,null,null,:old.n044,:new.n044);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N045'),'N',null,null,null,null,:old.n045,:new.n045);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N046'),'N',null,null,null,null,:old.n046,:new.n046);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N047'),'N',null,null,null,null,:old.n047,:new.n047);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N048'),'N',null,null,null,null,:old.n048,:new.n048);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N049'),'N',null,null,null,null,:old.n049,:new.n049);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('N050'),'N',null,null,null,null,:old.n050,:new.n050);
+       -- dates
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D001'),'D',null,null,:old.d001,:new.d001);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D002'),'D',null,null,:old.d002,:new.d002);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D003'),'D',null,null,:old.d003,:new.d003);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D004'),'D',null,null,:old.d004,:new.d004);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D005'),'D',null,null,:old.d005,:new.d005);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D006'),'D',null,null,:old.d006,:new.d006);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D007'),'D',null,null,:old.d007,:new.d007);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D008'),'D',null,null,:old.d008,:new.d008);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D009'),'D',null,null,:old.d009,:new.d009);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D010'),'D',null,null,:old.d010,:new.d010);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D011'),'D',null,null,:old.d011,:new.d011);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D012'),'D',null,null,:old.d012,:new.d012);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D013'),'D',null,null,:old.d013,:new.d013);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D014'),'D',null,null,:old.d014,:new.d014);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D015'),'D',null,null,:old.d015,:new.d015);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D016'),'D',null,null,:old.d016,:new.d016);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D017'),'D',null,null,:old.d017,:new.d017);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D018'),'D',null,null,:old.d018,:new.d018);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D019'),'D',null,null,:old.d019,:new.d019);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D020'),'D',null,null,:old.d020,:new.d020);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D021'),'D',null,null,:old.d021,:new.d021);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D022'),'D',null,null,:old.d022,:new.d022);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D023'),'D',null,null,:old.d023,:new.d023);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D024'),'D',null,null,:old.d024,:new.d024);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D025'),'D',null,null,:old.d025,:new.d025);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D026'),'D',null,null,:old.d026,:new.d026);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D027'),'D',null,null,:old.d027,:new.d027);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D028'),'D',null,null,:old.d028,:new.d028);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D029'),'D',null,null,:old.d029,:new.d029);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D030'),'D',null,null,:old.d030,:new.d030);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D031'),'D',null,null,:old.d031,:new.d031);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D032'),'D',null,null,:old.d032,:new.d032);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D033'),'D',null,null,:old.d033,:new.d033);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D034'),'D',null,null,:old.d034,:new.d034);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D035'),'D',null,null,:old.d035,:new.d035);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D036'),'D',null,null,:old.d036,:new.d036);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D037'),'D',null,null,:old.d037,:new.d037);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D038'),'D',null,null,:old.d038,:new.d038);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D039'),'D',null,null,:old.d039,:new.d039);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D040'),'D',null,null,:old.d040,:new.d040);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D041'),'D',null,null,:old.d041,:new.d041);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D042'),'D',null,null,:old.d042,:new.d042);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D043'),'D',null,null,:old.d043,:new.d043);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D044'),'D',null,null,:old.d044,:new.d044);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D045'),'D',null,null,:old.d045,:new.d045);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D046'),'D',null,null,:old.d046,:new.d046);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D047'),'D',null,null,:old.d047,:new.d047);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D048'),'D',null,null,:old.d048,:new.d048);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D049'),'D',null,null,:old.d049,:new.d049);
+       datagrid_logging(:new.id,:new.ws_app_id,:new.data_grid_id,la_col_label('D050'),'D',null,null,:old.d050,:new.d050);
+    end if;
+    --
+    -- set owner
+    --
+    if :new.owner is null then
+        :new.owner := :new.created_by;
+    end if;
+end;
+
+/
+ALTER TRIGGER  "APEX$_WS_ROWS_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_TAGS_T1" 
+before insert or update on "APEX$_WS_TAGS"
+for each row
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_WS_TAGS_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "APEX$_WS_WEBPG_SECTIONS_T1" 
+before insert or update on "APEX$_WS_WEBPG_SECTIONS"
+for each row
+declare
+    l_sequence_changed varchar2(1) := 'N';
+    l_title_changed varchar2(1) := 'N';
+    l_content_changed varchar2(1) := 'N';
+    procedure clob_upper( p_content in clob, p_content_upper in out nocopy clob)
+    is
+    l_buf varchar2(32767);
+    l_off number;
+    l_amt number;
+    begin
+    if p_content is not null then
+        l_amt := 8000;
+        l_off := 1;
+         sys.dbms_lob.trim( p_content_upper, 0);
+         begin
+             loop
+                 sys.dbms_lob.read( p_content, l_amt, l_off, l_buf );
+                 l_buf := upper( l_buf );
+                 sys.dbms_lob.writeappend( p_content_upper, length(l_buf), l_buf);
+                 l_off := l_off + l_amt;
+                 l_amt := 8000;
+             end loop;
+         exception
+             when no_data_found then null;
+         end;
+     end if;
+end clob_upper;
+begin
+    --
+    -- maintain pk and timestamps
+    --
+    if inserting and :new.id is null then
+        select to_number(sys_guid(),'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') into :new.id from sys.dual;
+    end if;
+    if :new.section_type = 'NAV_PAGE' then
+        if :new.nav_include_link is null then
+            :new.nav_include_link := 'Y';
+        end if;
+    end if;
+    if inserting and :new.content is not null then
+        sys.dbms_lob.createtemporary( :new.content_upper, false, sys.dbms_lob.call );
+        clob_upper( :new.content, :new.content_upper );
+    elsif updating then
+        if :new.content_upper is null then
+            sys.dbms_lob.createtemporary( :new.content_upper, false, sys.dbms_lob.call );
+        end if;
+        clob_upper( :new.content, :new.content_upper );
+    end if;
+    if inserting then
+        :new.created_on := sysdate;
+        :new.created_by := nvl(v('APP_USER'),user);
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        :new.change_count := 0;
+    elsif updating then
+        :new.updated_on := sysdate;
+        :new.updated_by := nvl(v('APP_USER'),user);
+        :new.change_count := nvl(:old.change_count,0) + 1;
+        if nvl(:old.display_sequence,-999) != nvl(:new.display_sequence,-999) then
+            l_sequence_changed := 'Y';
+        end if;
+        if nvl(:old.title,'jKKwZk') != nvl(:new.title,'jKKwZk') then
+            l_title_changed := 'Y';
+        end if;
+        if sys.dbms_lob.compare(:new.content,:old.content) != 0 or nvl(length(:new.content),0) != nvl(length(:old.content),0) then
+            l_content_changed := 'Y';
+        end if;
+        if l_sequence_changed = 'Y' or l_title_changed = 'Y' or l_content_changed = 'Y' then
+            insert into apex$_ws_webpg_section_history (section_id, ws_app_id, webpage_id, old_display_sequence, new_display_sequence,
+            old_title, new_title, old_content, new_content, change_date, application_user_id)
+            values (:new.id, :new.ws_app_id, :new.webpage_id,
+                    decode(l_sequence_changed,'Y',:old.display_sequence,null), decode(l_sequence_changed,'Y',:new.display_sequence,null),
+                    decode(l_title_changed,'Y',:old.title,null), decode(l_title_changed,'Y',:new.title,null),
+                    decode(l_content_changed,'Y',:old.content,null), decode(l_content_changed,'Y',:new.content,null), sysdate, nvl(v('APP_USER'),user));
+        end if;
+    end if;
+end;
+/
+ALTER TRIGGER  "APEX$_WS_WEBPG_SECTIONS_T1" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_CORREIO" 
+  before insert on "TB_CORREIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_CORREIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_CORREIO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_ESTADO_CORREIO" 
+  before insert on "TB_ESTADO_CORREIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_ESTADO_CORREIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_ESTADO_CORREIO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_ESTADO_NOTIFICACAO" 
+  before insert on "TB_ESTADO_NOTIFICACAO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_ESTADO_NOTIFICACAO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_ESTADO_NOTIFICACAO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_FUNCIONARIO" 
+  before insert on "TB_FUNCIONARIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_FUNCIONARIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_FUNCIONARIO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_HIST_TAXA_COND" 
+  before insert on "TB_HIST_TAXA_COND"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_HIST_TAXA_COND_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_HIST_TAXA_COND" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_ITEM_DE_RESERVA" 
+  before insert on "TB_ITEM_DE_RESERVA"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_ITEM_DE_RESERVA_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_ITEM_DE_RESERVA" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_LANCAMENTO_CONTABIL" 
+  before insert on "TB_LANCAMENTO_CONTABIL"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_LANCAMENTO_CONTABIL_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_LANCAMENTO_CONTABIL" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_MURAL_AVISO" 
+  before insert on "TB_MURAL_AVISO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_MURAL_AVISO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_MURAL_AVISO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_PERFIL_DE_ACESSO" 
+  before insert on "TB_PERFIL_DE_ACESSO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_PERFIL_DE_ACESSO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_PERFIL_DE_ACESSO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_PERFIL_USUARIO" 
+  before insert on "TB_PERFIL_USUARIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_PERFIL_USUARIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_PERFIL_USUARIO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_PLANO_DE_CONTAS" 
+  before insert on "TB_PLANO_DE_CONTAS"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_PLANO_DE_CONTAS_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_PLANO_DE_CONTAS" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_RECEITA_TAXA_COND" 
+  before insert on "TB_RECEITA_TAXA_COND"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_RECEITA_TAXA_COND_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_RECEITA_TAXA_COND" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_RESERVA" 
+  before insert on "TB_RESERVA"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_RESERVA_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_RESERVA" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_TAXA_COND_PAGA" 
+  before insert on "TB_TAXA_COND_PAGA"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_TAXA_COND_PAGA_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end;
+
+/
+ALTER TRIGGER  "BI_TB_TAXA_COND_PAGA" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_TIPO_CORREIO" 
+  before insert on "TB_TIPO_CORREIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_TIPO_CORREIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_TIPO_CORREIO" ENABLE
+/
+CREATE OR REPLACE EDITIONABLE TRIGGER  "BI_TB_USUARIO" 
+  before insert on "TB_USUARIO"               
+  for each row  
+begin   
+  if :NEW."COD" is null then 
+    select "TB_USUARIO_SEQ".nextval into :NEW."COD" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TB_USUARIO" ENABLE
+/

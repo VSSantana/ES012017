@@ -7,12 +7,13 @@
 --
 -- Error Conditions Raised: Incorrect parameters passed.
 --
--- Author:  Vinícius de Sousa Santana
+-- Author:  Vitor Pereira Tavares da Costa
 --
 -- Revision History
 -- Date            Author           Reason for Change
 -- --------------------------------------------------------------
--- 08 MAY 2017    V. S. Santana         Created
+-- 14 MAY 2017    V. P. T. Costa      Created
+-- 15 MAY 2017    V. S. Santana       Pattern correction
 -- **************************************************************
 
 create or replace FUNCTION  "F_RETURN_COD_PLANO_CONTAS" (pCodPlanoContas IN NUMBER) RETURN NUMBER
